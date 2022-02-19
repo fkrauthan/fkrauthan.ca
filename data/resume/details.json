@@ -1,0 +1,107 @@
+{
+  "FISPAN": {
+    "website": "https://fispan.com",
+    "ERP Development Lead": {
+      "technologies": [
+        "Java 8/11",
+        "Kotlin",
+        "Spring Boot",
+        "Ktor",
+        "PostgreSQL",
+        "MongoDB",
+        "RabbitMQ",
+        "ReactJS",
+        "Node.js",
+        "NetSuite (SuiteScript 2.X)",
+        "Intacct (Platform Services)",
+        "Python 3",
+        "Rust",
+        "Docker",
+        "Kubernetes"
+      ]
+    },
+    "Senior Software Developer": {
+      "technologies": [
+        "Java 7/8",
+        "Spring Boot",
+        "PostgreSQL",
+        "RabbitMQ",
+        "ReactJS",
+        "Node.js",
+        "NetSuite (SuiteScript 2.X)",
+        "Intacct (Platform Services)",
+        "Python 3",
+        "Docker",
+        "Kubernetes"
+      ]
+    }
+  },
+  "Cogindo Solutions Inc.": {
+    "website": "https://www.cogindo.net",
+    "President": {
+      "technologies": ["PHP", "Symfony 3/4/5"]
+    }
+  },
+  "Surespan Digital": {
+    "Senior Software Developer": {
+      "technologies": ["Java 8", "Kotlin", "Spring Boot", "RxJava", "Couchbase", "Kafka", "Solr", "Angular 2", "RxJS"]
+    }
+  },
+  "Hyperwallet": {
+    "website": "https://www.hyperwallet.com",
+    "Software Development Team Lead": {
+      "technologies": [
+        "Java 8 (EE)",
+        "EJB 3",
+        "Jersey",
+        "JSF",
+        "JMS",
+        "Struts",
+        "JUnit",
+        "TestNG",
+        "MySQL",
+        "Glassfish",
+        "Android (Java)",
+        "iOS (Objective-C)",
+        "ReactJS",
+        "jQuery",
+        "Webpack",
+        "Bootstrap 2/3"
+      ]
+    },
+    "Senior Software Developer": {
+      "technologies": [
+        "Java 7 (EE)",
+        "EJB 3",
+        "Jersey",
+        "JSF",
+        "JMS",
+        "Struts",
+        "JUnit",
+        "TestNG",
+        "MySQL",
+        "Glassfish",
+        "Android (Java)",
+        "iOS (Objective-C)",
+        "ReactJS",
+        "jQuery",
+        "Webpack",
+        "Bootstrap 2/3"
+      ]
+    }
+  },
+  "Florian Krauthan": {
+    "Owner": {
+      "technologies": ["PHP", "CakePHP 3", "Smarty"]
+    }
+  },
+  "1&1 Internet AG": {
+    "website": "https://unternehmen.1und1.de",
+    "Junior Software Developer": {
+      "technologies": ["Java 6", "Apache Wicket", "Tomact", "Maven"]
+    },
+    "Apprentice": {
+      "technologies": ["Java 6", "Spring 3", "Hibernate", "Apache Wicket", "Tomact", "Maven"]
+    }
+  }
+}

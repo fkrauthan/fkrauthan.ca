@@ -1,0 +1,29 @@
+.timeline ul,
+.timeline li {
+  @apply list-none p-0;
+}
+
+.timeline li {
+  @apply pb-4 border-l pl-20 ml-2 mb-0 mt-0;
+}
+
+.timeline li:last-child {
+  @apply border-0 pb-0;
+}
+
+.timeline li:before {
+  /*@apply bg-white border border-gray-400;*/
+
+  width: 25px;
+  height: 25px;
+  left: -13px;
+  top: 0;
+}
+
+.timeline li h4 {
+  @apply mt-0 mb-0;
+}
+
+.timeline li p {
+  @apply mt-0 mb-2;
+}

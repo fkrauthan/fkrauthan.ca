@@ -1,0 +1,389 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+  "basics": {
+    "name": "Florian Krauthan",
+    "label": "ERP Development Lead at FISPAN",
+    "image": "",
+    "email": "fkrauthan@gmx.net",
+    "phone": "+1 604 396 1991",
+    "url": "",
+    "summary": "",
+    "location": {
+      "countryCode": "US",
+      "address": "Canada"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "fkrauthan",
+        "url": "https://www.linkedin.com/in/fkrauthan/"
+      },
+      {
+        "network": "Twitter",
+        "username": "fkrauthan",
+        "url": "https://twitter.com/fkrauthan"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "FISPAN",
+      "position": "ERP Development Lead",
+      "startDate": "2019-05-31",
+      "endDate": "",
+      "highlights": [],
+      "summary": "Leading a team of five developers, one QA and one Coop in a SCRUM setup to deliver quality enhancements to our existing ERP's as well as integrating brand new ERP's into the FISPAN platform.",
+      "url": "https://www.linkedin.com/company/fispan/",
+      "location": "Vancouver, Canada"
+    },
+    {
+      "name": "FISPAN",
+      "position": "Senior Software Developer",
+      "startDate": "2017-11-30",
+      "endDate": "2019-05-31",
+      "highlights": [],
+      "summary": "Creating the very first iteration of the Netsuite and Intacct extension. In addition to that building and designing the internal sync engine that powers a lot of FISPAN's magic.",
+      "url": "https://www.linkedin.com/company/fispan/",
+      "location": "Vancouver, Canada"
+    },
+    {
+      "name": "Cogindo Solutions Inc.",
+      "position": "President",
+      "startDate": "2015-02-28",
+      "endDate": "",
+      "highlights": [],
+      "summary": "Building custom software to full fill the customers needs. Some projects include:  Prototype of a mobile game to teach science and an sailing school management software.",
+      "url": "",
+      "location": "Vancouver, Canada"
+    },
+    {
+      "name": "Surespan Digital",
+      "position": "Senior Software Developer",
+      "startDate": "2017-04-30",
+      "endDate": "2017-11-30",
+      "highlights": [],
+      "summary": "Developed on the Go99 App. An application that allows independent truck drivers to bid on posted jobs instead of having to go through am external (and often expensive) third party broker. Worked primarily on the backend and help get the idea of the ground.",
+      "url": "https://www.linkedin.com/company/surespan-digital/",
+      "location": "North Vancouver, Canada"
+    },
+    {
+      "name": "Hyperwallet",
+      "position": "Software Development Team Lead",
+      "startDate": "2015-12-31",
+      "endDate": "2017-03-31",
+      "highlights": [],
+      "summary": "Leading a team of four developers and one QA. As a SCRUM team we migrated successful the client portal from an old JSP UI to a brand new re-designed JSF based design as well as developed a developer portal to allow interested developers to easily explore and test the Hyperwallet API's.",
+      "url": "https://www.linkedin.com/company/hyperwallet/",
+      "location": "Vancouver, Canada"
+    },
+    {
+      "name": "Hyperwallet",
+      "position": "Senior Software Developer",
+      "startDate": "2012-10-31",
+      "endDate": "2015-12-31",
+      "highlights": [],
+      "summary": "Responsible for the mobile apps (native android and iOS) which included building a system to easily brand and deploy them. As well as creating the payout web user interface that allows end customers to select how they get paid. The last big challenge in this role was creating a embeddable widget to enter bank account information which supports bank accounts world wide including their unique validation rules.",
+      "url": "https://www.linkedin.com/company/hyperwallet/",
+      "location": "Vancouver, Canada"
+    },
+    {
+      "name": "Florian Krauthan",
+      "position": "Owner",
+      "startDate": "2008-12-31",
+      "endDate": "2015-02-28",
+      "highlights": [],
+      "summary": "Build various custom applications for customers around Munich. A couple of examples: A callcenter billing tool, a local yellow pages application and a movie crowdfunding portal.",
+      "url": "",
+      "location": "Munich, Germany and Vancouver, Canada"
+    },
+    {
+      "name": "1&1 Internet AG",
+      "position": "Junior Software Developer",
+      "startDate": "2012-07-31",
+      "endDate": "2012-08-31",
+      "highlights": [],
+      "summary": "PhotoManager Development (a web photo album) for GMX, WEB.DE and 1&1",
+      "url": "https://www.linkedin.com/company/ionos/",
+      "location": "Munich, Germany"
+    },
+    {
+      "name": "1&1 Internet AG",
+      "position": "Apprentice",
+      "startDate": "2009-08-31",
+      "endDate": "2012-07-31",
+      "highlights": [],
+      "summary": "Apprentice as an IT Specialist for Application Development. As part of the apprenticeship I've worked in software development, DevOps as well as product management.",
+      "url": "https://www.linkedin.com/company/ionos/",
+      "location": "Munich, Germany"
+    }
+  ],
+  "volunteer": [
+    {
+      "organization": "Marine Mammal Rescue Centre",
+      "position": "Animal Husbandry",
+      "startDate": "2015-03-31",
+      "endDate": "",
+      "summary": "The Marine Mammal Rescue Centre is Canada's only dedicated marine mammal rescue facility and one of the largest in the world.",
+      "highlights": [],
+      "url": ""
+    },
+    {
+      "organization": "Jericho Rescue Team",
+      "position": "Rescue Volunteer",
+      "startDate": "2016-04-30",
+      "endDate": "",
+      "summary": "Every year Jericho Rescue volunteers help over 200 mariners in peril. Beyond on-water support the team also provides a free safety seminar to anyone interested in attending.",
+      "highlights": [],
+      "url": ""
+    },
+    {
+      "organization": "Kids Code Jeunesse (KCJ)",
+      "position": "Mentor",
+      "startDate": "2015-10-31",
+      "endDate": "2017-01-31",
+      "summary": "Coding for kids (KCJ) is a non profit organisation dedicated to helping kids learn how to code by supporting teachers, educators, parents, volunteers and communities.",
+      "highlights": [],
+      "url": ""
+    },
+    {
+      "organization": "GIRLsmarts4tech",
+      "position": "Mentor",
+      "startDate": "2015-12-31",
+      "endDate": "2016-02-28",
+      "summary": "GIRLsmarts4tech is the chance for girls in grade 7 to explore and learn about computer science. We have hands-on activities and cool demos.",
+      "highlights": [],
+      "url": ""
+    },
+    {
+      "organization": "Symphonic Wind Orchestra Germering",
+      "position": "Youth Group Leader",
+      "startDate": "",
+      "endDate": "2012-06-30",
+      "summary": "The orchestra's mission is to give people easy access to learn an instrument and participate in an locally well known orchestra. In addition to that they organize activities like going to an movie studio, learn to cook and many more to keep the youth engaged.",
+      "highlights": [],
+      "url": ""
+    }
+  ],
+  "education": [
+    {
+      "institution": "Vocational school for information technology",
+      "area": "Applications development",
+      "studyType": "Information technology specialist applications development",
+      "startDate": "2009-12-31",
+      "endDate": "2012-12-31",
+      "score": "1,38",
+      "courses": []
+    }
+  ],
+  "awards": [],
+  "certificates": [],
+  "publications": [],
+  "skills": [
+    {
+      "name": "JavaScript",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "MySQL",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "HTML",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "CSS",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Hyperwallet",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "AngularJS",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Doctrine",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Wicket",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "CMake",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "PHP",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "EJB",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "twig",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Hibernate",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Boost",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "JSF",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Maven",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Spring",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "iOS development",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "PEAR",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Linux",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Facebook API",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "HTML5",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Social Media",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "C++",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "jQuery",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Java",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Android Development",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "SQL",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "XML",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "CakePHP",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Solr",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "SEO",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "HTML 5",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Symfony",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Node.js",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Curl",
+      "level": "",
+      "keywords": []
+    }
+  ],
+  "languages": [
+    {
+      "fluency": "Native Speaker",
+      "language": "English"
+    },
+    {
+      "fluency": "Native Speaker",
+      "language": "German"
+    }
+  ],
+  "interests": [],
+  "references": [
+    {
+      "name": "Tashfeen Mahmud",
+      "reference": "At times you have to write the phrase \"I was fortunate to have worked with [person] at [company]...\" without really meaning it. But in the case of Florian, I certainly mean it; it was a privilege to work with him. It's astonishing to witness the breadth of his technical knowledge, especially given that he's still quite young. The fact that Hyperwallet now boasts one of the best API developer experiences in the FinTech industry owes a great deal to him. \n\nFlo is a ridiculously fast learner, and efficient almost to a fault. One might be led to think that such qualities would render him unfit to be a leader, when in fact they had the opposite effect -- he was great at planning and distributing tasks. Above all, Flo is meticulous and fair. He also happens to be a really cool guy. \n\nOne of the most talented developers I have ever worked with for sure, and hopefully one day I'll get a chance to work with him again. "
+    },
+    {
+      "name": "Jörg Wendland",
+      "reference": "Florian is a talented software developer with loads of ideas and always eager to learn something new."
+    }
+  ],
+  "projects": [],
+  "meta": {
+    "version": "v1.0.0",
+    "canonical": "https://github.com/jsonresume/resume-schema/blob/v1.0.0/schema.json"
+  }
+}

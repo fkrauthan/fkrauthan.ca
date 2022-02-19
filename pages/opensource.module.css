@@ -1,0 +1,10 @@
+.markdown li > p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown blockquote {
+  quotes: none;
+
+  @apply p-2 py-1 font-normal not-italic;
+}
