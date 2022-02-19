@@ -63,7 +63,8 @@ function HomePageContent() {
 function HomePage() {
   return (
     <Layout
-      pageTitle={"Welcome"}
+      pageTitle="Welcome"
+      pageDescription="Florian Krauthan, a Vancouver based software developer, who loves to eat, breathe and sleep technology to make the world a better place."
       headerContent={<HomePageContent />}
       headerClassName={styles.header}
       hideTopNavigation

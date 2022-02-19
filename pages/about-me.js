@@ -223,7 +223,9 @@ function MainSection({ work, volunteer }) {
 
 function AboutMePage({ label, work, volunteer }) {
   return (
-    <Layout pageTitle="About me">
+    <Layout
+      pageTitle="About me"
+      pageDescription="Learn more about Florian Krauthan, including but not limited to background, skills and interests">
       <div className="flex flex-col md:flex-row-reverse md:m-12 md:my-8 shadow-2xl">
         <Sidebar label={label} />
         <MainSection work={work} volunteer={volunteer} />

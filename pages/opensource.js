@@ -54,7 +54,9 @@ function Project({ title, markdown, github, baseTechnology, technologies }) {
 
 export function OpensourcePage({ projects }) {
   return (
-    <Layout pageTitle="Open-source">
+    <Layout
+      pageTitle="Open-source"
+      pageDescription="An assortment of Opensource contributions made by Florian Krauthan to improve and fix cool opensource apps and libraries.">
       <div className="flex flex-col md:m-12 md:my-8 shadow-2xl">
         <div className="content w-full p-6 sm:p-12">
           <div className="prose">

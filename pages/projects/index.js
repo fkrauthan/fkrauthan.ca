@@ -18,9 +18,26 @@ function getPageTitle(activeTechnology, technologies) {
   }
 }
 
+function getPageDescription(activeTechnology, technologies) {
+  if (!activeTechnology) {
+    return "An array of projects done by Florian Krauthan including the full range of development.";
+  }
+
+  if (activeTechnology === "active") {
+    return "An array of current projects done by Florian Krauthan including the full range of development.";
+  } else if (activeTechnology === "past") {
+    return "An array of past projects done by Florian Krauthan including the full range of development.";
+  } else {
+    const technology = technologies.find(({ slug }) => slug === activeTechnology);
+    return `An array of projects written in ${technology.name} developed from start to finish.`;
+  }
+}
+
 export function ProjectsPage({ activeTechnology, technologies, projects }) {
   return (
-    <Layout pageTitle={getPageTitle(activeTechnology, technologies)}>
+    <Layout
+      pageTitle={getPageTitle(activeTechnology, technologies)}
+      pageDescription={getPageDescription(activeTechnology, technologies)}>
       <div className="flex flex-col md:m-12 md:my-8 shadow-2xl">
         <div className="content w-full p-6 sm:p-12">
           <div className="prose">
