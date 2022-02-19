@@ -4,6 +4,7 @@ import { useState } from "react";
 import CloseOutline from "react-ionicons/lib/CloseOutline";
 import MenuOutline from "react-ionicons/lib/MenuOutline";
 
+import ThemeSwitcher from "./ThemeSwitcher";
 import ThemedIcon from "./ThemedIcon";
 
 function MenuLink({ route, title }) {
@@ -30,6 +31,8 @@ function Header({ content, headerClassName, hideTopNavigation }) {
           <Link href="/">
             <a className="no-underline h-5 text-2xl font-semibold mb-3">Florian Krauthan</a>
           </Link>
+          <ThemeSwitcher className="block sm:hidden" />
+
           {!hideTopNavigation && (
             <button
               id="menuBtn"
@@ -53,8 +56,11 @@ function Header({ content, headerClassName, hideTopNavigation }) {
             <MenuLink route="/about-me" title="About Me" />
             <MenuLink route="/projects" title="Projects" />
             <MenuLink route="/opensource" title="Open-source" />
+
+            <ThemeSwitcher className="hidden sm:block" />
           </div>
         )}
+        {hideTopNavigation && <ThemeSwitcher className="hidden sm:block" />}
       </nav>
 
       {content}

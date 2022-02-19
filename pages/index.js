@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import Link from "next/link";
 
-import Layout from "../components/layout";
+import Layout from "../components/Layout";
 
 import styles from "./index.module.css";
 
