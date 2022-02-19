@@ -21,7 +21,7 @@ export default function DaysWorked({ isCurrent, days }) {
   }
 
   return (
-    <span className="text-gray-700 pl-3 text-sm">
+    <span className="text-gray-700 dark:text-gray-400 pl-3 text-sm">
       {isCurrent && !client && "current"}
       {(!isCurrent || client) && (
         <>

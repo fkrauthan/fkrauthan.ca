@@ -1,6 +1,7 @@
 import LogoGithub from "react-ionicons/lib/LogoGithub";
 
 import MarkdownRenderer from "../components/MarkdownRenderer";
+import ThemedIcon from "../components/ThemedIcon";
 import Layout from "../components/layout";
 import SectionHeader from "../components/resume/SectionHeader";
 
@@ -10,9 +11,9 @@ function Project({ title, markdown, github, baseTechnology, technologies }) {
   const finalTitle = title.replace("/", " / ");
 
   return (
-    <div className="p-4 rounded bg-gray-50">
+    <div className="p-4 rounded-md border bg-gray-50 dark:border-0 dark:bg-neutral-900">
       <div className="flex justify-between">
-        <div className="prose">
+        <div className="prose dark:prose-invert">
           <h3 style={{ marginBottom: 0 }}>
             {github && (
               <a href={github} style={{ textDecoration: "none" }} target="_blank" rel="noopener noreferrer">
@@ -39,13 +40,13 @@ function Project({ title, markdown, github, baseTechnology, technologies }) {
               title={`${finalTitle} GitHub`}
               target="_blank"
               rel="noopener noreferrer">
-              <LogoGithub width="32px" height="32px" />
+              <ThemedIcon component={LogoGithub} width="32px" height="32px" />
             </a>
           )}
         </div>
       </div>
 
-      <div className={`prose ${styles.markdown} mt-3`}>
+      <div className={`prose dark:prose-invert ${styles.markdown} mt-3`}>
         <MarkdownRenderer ast={markdown} />
       </div>
     </div>
@@ -59,11 +60,11 @@ export function OpensourcePage({ projects }) {
       pageDescription="An assortment of Opensource contributions made by Florian Krauthan to improve and fix cool opensource apps and libraries.">
       <div className="flex flex-col md:m-12 md:my-8 shadow-2xl">
         <div className="content w-full p-6 sm:p-12">
-          <div className="prose">
+          <div className="prose dark:prose-invert">
             <SectionHeader title="Open-source Contributions" />
           </div>
 
-          <blockquote className="my-6 p-4 italic border-l-4 bg-gray-100 text-gray-600 border-gray-500 quote">
+          <blockquote className="my-6 p-4 italic border-l-4 bg-gray-100 dark:bg-zinc-800 text-gray-600 dark:text-gray-300 border-gray-500 quote">
             <p>The following page lists a couple of my open-source contributions over the years.</p>
           </blockquote>
 

@@ -1,5 +1,6 @@
 import EarthOutline from "react-ionicons/lib/EarthOutline";
 
+import ThemedIcon from "../../ThemedIcon";
 import DaysWorked, { calculateDaysWorked } from "./DaysWorked";
 import RoleTimeline from "./RoleTimeline";
 
@@ -21,7 +22,7 @@ export default function WorkEntry({ company, website, isCurrent, roles }) {
         {company}{" "}
         {website && (
           <a href={website} target="_blank" rel="noreferrer nofollow" title={`${company} Website`}>
-            <EarthOutline width="18px" height="18px" style={{ display: "inline" }} />
+            <ThemedIcon component={EarthOutline} width="18px" height="18px" style={{ display: "inline" }} />
           </a>
         )}{" "}
         <DaysWorked days={daysWorked} isCurrent={isCurrent} />

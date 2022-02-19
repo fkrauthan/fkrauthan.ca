@@ -40,18 +40,18 @@ export function ProjectsPage({ activeTechnology, technologies, projects }) {
       pageDescription={getPageDescription(activeTechnology, technologies)}>
       <div className="flex flex-col md:m-12 md:my-8 shadow-2xl">
         <div className="content w-full p-6 sm:p-12">
-          <div className="prose">
+          <div className="prose dark:prose-invert">
             <SectionHeader title="Projects" />
           </div>
 
-          <blockquote className="my-6 p-4 italic border-l-4 bg-gray-100 text-gray-600 border-gray-500 quote">
+          <blockquote className="my-6 p-4 italic border-l-4 bg-gray-100 dark:bg-zinc-800 text-gray-600 dark:text-gray-300 border-gray-500 quote">
             <p>
               All projects listed below are hobby projects only. To see some of my freelance work please head over to{" "}
               <a
                 href="https://cogindo.net"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-500 hover:text-gray-900">
+                className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300">
                 cogindo.net
               </a>
               .

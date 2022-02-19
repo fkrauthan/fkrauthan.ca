@@ -6,8 +6,8 @@ function TechnologyFilterOption({ slug, name, activeTechnology }) {
   const urlSuffix = !slug ? "" : `/${slug}`;
   const linkClassName = clsx(
     "block text-center px-4 py-1 text-lg",
-    "rounded-md hover:bg-yellow-100",
-    isActive && "bg-yellow-300"
+    "rounded-md hover:bg-yellow-100 dark:hover:bg-yellow-500",
+    isActive && "bg-yellow-300 dark:bg-yellow-600"
   );
 
   return (
@@ -25,7 +25,7 @@ function Separator() {
 
 export default function TechnologyFilter({ technologies, activeTechnology = "" }) {
   return (
-    <div className="space-x-4 flex justify-center">
+    <div className="space-x-4 flex justify-center overflow-auto">
       <TechnologyFilterOption slug="" name="All" activeTechnology={activeTechnology} />
 
       <Separator />

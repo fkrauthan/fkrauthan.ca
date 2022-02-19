@@ -24,6 +24,9 @@
   left: -13px;
   top: 0;
 }
+:global(.dark) .timeline li:before {
+  @apply bg-zinc-900 border-gray-300;
+}
 
 .timeline li h4 {
   @apply mt-0 mb-0;

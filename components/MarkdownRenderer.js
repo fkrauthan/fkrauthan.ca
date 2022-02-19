@@ -26,7 +26,7 @@ const getComponent = (node) => {
 
     case "blockquote":
       return ({ children }) => (
-        <blockquote className="my-6 p-4 italic border-l-4 bg-gray-100 text-gray-600 border-gray-500 quote">
+        <blockquote className="my-6 p-4 italic border-l-4 bg-gray-100 dark:bg-zinc-800 text-gray-600 dark:text-gray-300 border-gray-500 quote">
           {children}
         </blockquote>
       );

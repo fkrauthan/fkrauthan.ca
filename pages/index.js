@@ -24,7 +24,8 @@ function HomePageContent() {
         <div className="self-center items-center flex flex-col sm:flex-row w-full md:w-5/6 xl:w-2/3 px-4 sm:px-0">
           <div className="w-full text-center sm:text-left sm:w-1/2 py-12 sm:px-8">
             <h1 className="tracking-wide text-yellow-500 text-2xl mb-6">
-              Welcome: <span className="text-gray-800 font-bold tracking tracking-widest">and hello</span>
+              Welcome:{" "}
+              <span className="text-gray-800 dark:text-gray-400 font-bold tracking tracking-widest">and hello</span>
             </h1>
             <h2 className="font-bold tracking-widest text-4xl">I speak...</h2>
             <TechnologyList>
@@ -45,13 +46,13 @@ function HomePageContent() {
       </div>
       <div className="flex flex-row w-full justify-center pb-12">
         <Link href="/about-me">
-          <a className="px-10 py-2 bg-yellow-500 rounded-full shadow-md text-lg hover:bg-yellow-100 hover:border-red mx-2">
+          <a className="px-10 py-2 bg-yellow-500 dark:bg-yellow-600 dark:hover:border-red dark:hover:bg-yellow-500 text-center rounded-full shadow-md text-lg hover:bg-yellow-100 hover:border-red mx-2">
             Get to know me
           </a>
         </Link>
 
         <Link href="/projects">
-          <a className="px-10 py-2 bg-yellow-500 rounded-full shadow-md text-lg hover:bg-yellow-100 hover:border-red mx-2">
+          <a className="px-10 py-2 bg-yellow-500 dark:bg-yellow-600 dark:hover:border-red dark:hover:bg-yellow-500 text-center rounded-full shadow-md text-lg hover:bg-yellow-100 hover:border-red mx-2">
             See what I can do
           </a>
         </Link>
@@ -66,7 +67,7 @@ function HomePage() {
       pageTitle="Welcome"
       pageDescription="Florian Krauthan, a Vancouver based software developer, who loves to eat, breathe and sleep technology to make the world a better place."
       headerContent={<HomePageContent />}
-      headerClassName={styles.header}
+      headerClassName={clsx(styles.header, "dark:bg-none dark:opacity-100 dark:bg-slate-900")}
       hideTopNavigation
     />
   );

@@ -96,7 +96,9 @@ function HobbiesSection({ sidebar }) {
 
 function Sidebar({ label }) {
   return (
-    <div id="sidebar" className="w-full md:max-w-md p-8 bg-gradient-to-b from-yellow-400 via-pink-100 to-purple-50">
+    <div
+      id="sidebar"
+      className="w-full md:max-w-md p-8 bg-gradient-to-b from-yellow-400 dark:from-yellow-800 dark:via-pink-800 dark:to-purple-700 via-pink-900 to-purple-50">
       <div className="px-2 mb-12">
         <div className="w-48 mx-auto mb-2">
           <Image
@@ -166,7 +168,7 @@ function Sidebar({ label }) {
 function MainSection({ work, volunteer }) {
   return (
     <div className="content w-full p-6 sm:p-12">
-      <div id="profile" className="prose max-w-none">
+      <div id="profile" className="prose dark:prose-invert max-w-none">
         <SectionHeader title="Profile" />
 
         <p>
@@ -181,7 +183,7 @@ function MainSection({ work, volunteer }) {
         </p>
       </div>
       <hr className="mt-8 mb-12" />
-      <div id="experience" className="prose">
+      <div id="experience" className="prose dark:prose-invert">
         <SectionHeader title="Experience" />
 
         {work.map(({ company, website, isCurrent, roles }, i) => (
@@ -191,7 +193,7 @@ function MainSection({ work, volunteer }) {
 
       <hr className="mt-8 mb-12" />
 
-      <div id="projects" className="prose">
+      <div id="projects" className="prose dark:prose-invert">
         <SectionHeader title="Volunteer work" />
         <div className="mb-16">
           <ul>
@@ -211,7 +213,7 @@ function MainSection({ work, volunteer }) {
       <div className="block md:hidden">
         <hr className="mt-8 mb-12" />
 
-        <div id="projects" className="prose max-w-none">
+        <div id="projects" className="prose dark:prose-invert max-w-none">
           <SectionHeader title="Hobbies" />
 
           <HobbiesSection />

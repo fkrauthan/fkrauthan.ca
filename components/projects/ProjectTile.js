@@ -3,11 +3,14 @@ import LogoGithub from "react-ionicons/lib/LogoGithub";
 
 import ActivePill from "../ActivePill";
 import MarkdownRenderer from "../MarkdownRenderer";
+import ThemedIcon from "../ThemedIcon";
 
 export function TechnologyItem({ title }) {
   return (
     <>
-      <span className="rounded-xl bg-gray-300 px-3 whitespace-nowrap mx-0.5 text-xs">{title}</span>{" "}
+      <span className="rounded-xl bg-gray-300 dark:bg-gray-800 px-3 whitespace-nowrap mx-0.5 text-xs py-0.5">
+        {title}
+      </span>{" "}
     </>
   );
 }
@@ -24,11 +27,11 @@ export default function ProjectTile({
   const startYear = new Date(developmentStart).getFullYear();
 
   return (
-    <div className="block rounded-md border p-5 hover:bg-yellow-100 flex flex-col">
+    <div className="block rounded-md border p-5 bg-gray-50 dark:border-0 dark:bg-neutral-900 flex flex-col">
       <div className="flex justify-between mb-3">
-        <div className="prose">
+        <div className="prose dark:prose-invert">
           <h3 style={{ marginBottom: 0 }}>
-            {title} <sup className="text-sm text-gray-500">{baseTechnology}</sup>
+            {title} <sup className="text-sm text-gray-500 dark:text-gray-400">{baseTechnology}</sup>
           </h3>
           <small>Started {startYear}</small>
         </div>
@@ -37,7 +40,7 @@ export default function ProjectTile({
         </div>
       </div>
 
-      <div className="prose">
+      <div className="prose dark:prose-invert">
         <MarkdownRenderer ast={summary} />
       </div>
 
@@ -60,7 +63,7 @@ export default function ProjectTile({
                   title={`${title} Project Website`}
                   target="_blank"
                   rel="noopener noreferrer">
-                  <GlobeOutline width="32px" height="32px" />
+                  <ThemedIcon component={GlobeOutline} width="32px" height="32px" />
                 </a>
               )}
 
@@ -72,7 +75,7 @@ export default function ProjectTile({
                   title={`${title} GitHub`}
                   target="_blank"
                   rel="noopener noreferrer">
-                  <LogoGithub width="32px" height="32px" />
+                  <ThemedIcon component={LogoGithub} width="32px" height="32px" />
                 </a>
               )}
             </div>
