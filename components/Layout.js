@@ -2,7 +2,7 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 
 import BuyACoffee from "./BuyACoffee";
-import Header from "./header";
+import Header from "./Header";
 
 function Layout({ children, pageTitle, pageDescription, headerContent, headerClassName, hideTopNavigation }) {
   const router = useRouter();

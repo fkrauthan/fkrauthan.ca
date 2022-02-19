@@ -8,7 +8,7 @@ import LogoXing from "react-ionicons/lib/LogoXing";
 import MailOutline from "react-ionicons/lib/MailOutline";
 
 import ActivePill from "../components/ActivePill";
-import Layout from "../components/layout";
+import Layout from "../components/Layout";
 import SectionHeader from "../components/resume/SectionHeader";
 import SkillList, { SkillListItem } from "../components/resume/SkillList";
 import SidebarEntry from "../components/resume/sidebar/SidebarEntry";

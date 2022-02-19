@@ -1,4 +1,4 @@
-import Layout from "../../components/layout";
+import Layout from "../../components/Layout";
 import ProjectTile from "../../components/projects/ProjectTile";
 import TechnologyFilter from "../../components/projects/TechnologyFilter";
 import SectionHeader from "../../components/resume/SectionHeader";
