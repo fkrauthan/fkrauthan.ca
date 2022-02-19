@@ -223,7 +223,7 @@ function MainSection({ work, volunteer }) {
 
 function AboutMePage({ label, work, volunteer }) {
   return (
-    <Layout>
+    <Layout pageTitle="About me">
       <div className="flex flex-col md:flex-row-reverse md:m-12 md:my-8 shadow-2xl">
         <Sidebar label={label} />
         <MainSection work={work} volunteer={volunteer} />

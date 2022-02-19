@@ -61,7 +61,14 @@ function HomePageContent() {
 }
 
 function HomePage() {
-  return <Layout headerContent={<HomePageContent />} headerClassName={styles.header} hideTopNavigation />;
+  return (
+    <Layout
+      pageTitle={"Welcome"}
+      headerContent={<HomePageContent />}
+      headerClassName={styles.header}
+      hideTopNavigation
+    />
+  );
 }
 
 export default HomePage;

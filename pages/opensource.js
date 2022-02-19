@@ -54,7 +54,7 @@ function Project({ title, markdown, github, baseTechnology, technologies }) {
 
 export function OpensourcePage({ projects }) {
   return (
-    <Layout>
+    <Layout pageTitle="Open-source">
       <div className="flex flex-col md:m-12 md:my-8 shadow-2xl">
         <div className="content w-full p-6 sm:p-12">
           <div className="prose">

@@ -3,9 +3,24 @@ import ProjectTile from "../../components/projects/ProjectTile";
 import TechnologyFilter from "../../components/projects/TechnologyFilter";
 import SectionHeader from "../../components/resume/SectionHeader";
 
+function getPageTitle(activeTechnology, technologies) {
+  if (!activeTechnology) {
+    return "Projects";
+  }
+
+  if (activeTechnology === "active") {
+    return "Active - Projects";
+  } else if (activeTechnology === "past") {
+    return "Past - Projects";
+  } else {
+    const technology = technologies.find(({ slug }) => slug === activeTechnology);
+    return `${technology.name} - Projects`;
+  }
+}
+
 export function ProjectsPage({ activeTechnology, technologies, projects }) {
   return (
-    <Layout>
+    <Layout pageTitle={getPageTitle(activeTechnology, technologies)}>
       <div className="flex flex-col md:m-12 md:my-8 shadow-2xl">
         <div className="content w-full p-6 sm:p-12">
           <div className="prose">
