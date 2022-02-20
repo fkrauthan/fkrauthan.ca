@@ -1,6 +1,8 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
 
+import faviconPng from "../public/favicon.png";
+import faviconSvg from "../public/favicon.svg";
 import BuyACoffee from "./BuyACoffee";
 import Header from "./Header";
 
@@ -21,6 +23,9 @@ function Layout({ children, pageTitle, pageDescription, headerContent, headerCla
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Florian Krauthan" />
         <meta property="og:locale" content="en_CA" />
+
+        <link rel="icon" type="image/svg+xml" href={faviconSvg.src} />
+        <link rel="icon" type="image/png" href={faviconPng.src} />
       </Head>
 
       <Header content={headerContent} headerClassName={headerClassName} hideTopNavigation={hideTopNavigation} />
