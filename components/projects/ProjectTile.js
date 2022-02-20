@@ -4,6 +4,7 @@ import LogoGithub from "react-ionicons/lib/LogoGithub";
 import ActivePill from "../ActivePill";
 import MarkdownRenderer from "../MarkdownRenderer";
 import ThemedIcon from "../ThemedIcon";
+import ProjectLink from "./ProjectLink";
 
 export function TechnologyItem({ title }) {
   return (
@@ -55,29 +56,8 @@ export default function ProjectTile({
               ))}
             </div>
             <div className="flex-none self-end">
-              {website && (
-                <a
-                  href={website}
-                  style={{ textDecoration: "none" }}
-                  className="inline-block border p border-yellow-500 rounded-full border-opacity-0 hover:border-opacity-100"
-                  title={`${title} Project Website`}
-                  target="_blank"
-                  rel="noopener noreferrer">
-                  <ThemedIcon component={GlobeOutline} width="32px" height="32px" />
-                </a>
-              )}
-
-              {github && (
-                <a
-                  href={github}
-                  style={{ textDecoration: "none" }}
-                  className="inline-block border p border-yellow-500 rounded-full border-opacity-0 hover:border-opacity-100"
-                  title={`${title} GitHub`}
-                  target="_blank"
-                  rel="noopener noreferrer">
-                  <ThemedIcon component={LogoGithub} width="32px" height="32px" />
-                </a>
-              )}
+              {website && <ProjectLink href={website} title={`${title} Project Website`} icon={GlobeOutline} />}
+              {github && <ProjectLink href={github} title={`${title} GitHub`} icon={LogoGithub} />}
             </div>
           </div>
         </div>

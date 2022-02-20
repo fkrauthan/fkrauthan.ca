@@ -3,6 +3,7 @@ import LogoGithub from "react-ionicons/lib/LogoGithub";
 import Layout from "../components/Layout";
 import MarkdownRenderer from "../components/MarkdownRenderer";
 import ThemedIcon from "../components/ThemedIcon";
+import ProjectLink from "../components/projects/ProjectLink";
 import SectionHeader from "../components/resume/SectionHeader";
 
 import styles from "./opensource.module.css";
@@ -32,17 +33,7 @@ function Project({ title, markdown, github, baseTechnology, technologies }) {
           </small>
         </div>
         <div className="pl-2">
-          {github && (
-            <a
-              href={github}
-              style={{ textDecoration: "none" }}
-              className="inline-block border p border-yellow-500 rounded-full border-opacity-0 hover:border-opacity-100"
-              title={`${finalTitle} GitHub`}
-              target="_blank"
-              rel="noopener noreferrer">
-              <ThemedIcon component={LogoGithub} width="32px" height="32px" />
-            </a>
-          )}
+          {github && <ProjectLink href={github} title={`${finalTitle} GitHub`} icon={LogoGithub} />}
         </div>
       </div>
 
