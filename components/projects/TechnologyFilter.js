@@ -11,33 +11,39 @@ function TechnologyFilterOption({ slug, name, activeTechnology }) {
   );
 
   return (
-    <div>
+    <li className="inline-block">
       <Link href={`/projects${urlSuffix}`}>
         <a className={linkClassName}>{name}</a>
       </Link>
-    </div>
+    </li>
   );
 }
 
 function Separator() {
-  return <div className="block text-center px-2 py-1 text-lg text-gray-400">&bull;</div>;
+  return (
+    <li className="inline-block">
+      <div className="text-center px-2 py-1 text-lg text-gray-400">&bull;</div>
+    </li>
+  );
 }
 
 export default function TechnologyFilter({ technologies, activeTechnology = "" }) {
   return (
-    <div className="space-x-4 flex justify-center overflow-auto">
-      <TechnologyFilterOption slug="" name="All" activeTechnology={activeTechnology} />
+    <div className="text-center">
+      <ul className="space-x-4">
+        <TechnologyFilterOption slug="" name="All" activeTechnology={activeTechnology} />
 
-      <Separator />
+        <Separator />
 
-      <TechnologyFilterOption slug="active" name="Active" activeTechnology={activeTechnology} />
-      <TechnologyFilterOption slug="past" name="Past" activeTechnology={activeTechnology} />
+        <TechnologyFilterOption slug="active" name="Active" activeTechnology={activeTechnology} />
+        <TechnologyFilterOption slug="past" name="Past" activeTechnology={activeTechnology} />
 
-      <Separator />
+        <Separator />
 
-      {technologies.map(({ slug, name }) => (
-        <TechnologyFilterOption key={slug} slug={slug} name={name} activeTechnology={activeTechnology} />
-      ))}
+        {technologies.map(({ slug, name }) => (
+          <TechnologyFilterOption key={slug} slug={slug} name={name} activeTechnology={activeTechnology} />
+        ))}
+      </ul>
     </div>
   );
 }
