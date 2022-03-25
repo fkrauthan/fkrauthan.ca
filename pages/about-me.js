@@ -99,7 +99,7 @@ function Sidebar({ label }) {
       className="w-full md:max-w-md p-8 bg-gradient-to-b from-yellow-400 dark:from-yellow-800 dark:via-pink-800 dark:to-purple-700 via-pink-900 to-purple-50">
       <div className="px-2 mb-12">
         <div className="w-48 mx-auto mb-2">
-          <img src="/fkrauthan.jpg" alt="Profile Picture" className="rounded-full w-48 mx-auto mb-2" />
+          <img src="/img/fkrauthan.jpg" alt="Profile Picture" className="rounded-full w-48 mx-auto mb-2" />
         </div>
 
         <h1 className="text-center text-3xl font-semibold mb-2">Florian Krauthan</h1>

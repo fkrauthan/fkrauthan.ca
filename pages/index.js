@@ -40,7 +40,7 @@ function HomePageContent() {
             <p className="font-bold tracking-widest text-4xl">...what about you!</p>
           </div>
           <div className="w-full sm:w-1/2">
-            <img src="/img/undraw_Friends_online_re_r7pq.svg" alt="Portrait of Florian Krauthan" />
+            <img src="/img/fkrauthan-cartoon.jpg" alt="Portrait of Florian Krauthan" className="rounded-full" />
           </div>
         </div>
       </div>
