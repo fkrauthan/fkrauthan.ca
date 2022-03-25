@@ -3,9 +3,11 @@ import { useRouter } from "next/router";
 
 import BuyACoffee from "./BuyACoffee";
 import Header from "./Header";
+import PiwikAnalytics from "./PiwikAnalytics";
 
 function Layout({ children, pageTitle, pageDescription, headerContent, headerClassName, hideTopNavigation }) {
   const router = useRouter();
+  console.log("Render Layout");
 
   return (
     <>
@@ -24,6 +26,8 @@ function Layout({ children, pageTitle, pageDescription, headerContent, headerCla
 
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <link rel="icon" type="image/png" href="/favicon.png" />
+
+        <PiwikAnalytics />
       </Head>
 
       <Header content={headerContent} headerClassName={headerClassName} hideTopNavigation={hideTopNavigation} />
