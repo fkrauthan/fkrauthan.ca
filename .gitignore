@@ -2,6 +2,7 @@
 .next/
 out/
 node_modules/
+.env*.local
 
 
 ### JetBrains template
