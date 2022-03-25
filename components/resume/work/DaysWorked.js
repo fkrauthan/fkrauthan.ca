@@ -20,12 +20,15 @@ export default function DaysWorked({ isCurrent, days }) {
     numMonths = 0;
   }
 
+  const yrs = numYears === 1 ? "yr" : "yrs";
+  const mos = numMonths === 1 ? "mo" : "mos";
+
   return (
     <span className="text-gray-700 dark:text-gray-400 pl-3 text-sm">
       {isCurrent && !client && "current"}
       {(!isCurrent || client) && (
         <>
-          {numYears > 0 && `${numYears} yrs`} {numMonths > 0 && `${numMonths} mos`}
+          {numYears > 0 && `${numYears} ${yrs}`} {numMonths > 0 && `${numMonths} ${mos}`}
         </>
       )}
     </span>
