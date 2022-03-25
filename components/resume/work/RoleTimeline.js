@@ -14,13 +14,13 @@ function formatDate(dateRaw) {
   return `${formatter.format(date)} ${date.getFullYear()}`;
 }
 
-function Role({ position, location, technologies, startDate, endDate, summary }) {
+function Role({ position, location, showDaysWorked, technologies, startDate, endDate, summary }) {
   const daysWorked = calculateDaysWorked(startDate, endDate);
 
   return (
     <li>
       <h4>
-        {position} <DaysWorked days={daysWorked} isCurrent={!endDate} />
+        {position} {showDaysWorked && <DaysWorked days={daysWorked} isCurrent={!endDate} />}
       </h4>
       <small>
         {location && <>{location} &bull; </>}
@@ -43,7 +43,7 @@ export default function RoleTimeline({ roles }) {
     <div className={styles.timeline}>
       <ul>
         {roles.map(({ position, ...props }) => (
-          <Role key={position} position={position} {...props} />
+          <Role key={position} position={position} showDaysWorked={roles.length > 1} {...props} />
         ))}
       </ul>
     </div>
