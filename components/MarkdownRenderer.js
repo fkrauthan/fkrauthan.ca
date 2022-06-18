@@ -1,5 +1,5 @@
-import { memo } from "react";
 import Link from "next/link";
+import { memo } from "react";
 
 /* eslint-disable react/display-name */
 const getComponent = (node) => {
@@ -38,9 +38,17 @@ const getComponent = (node) => {
     case "link":
       return ({ url, children }) => {
         if (url.startsWith("/")) {
-          return <Link href={url}><a className="hover:text-gray-400 font-normal">{children}</a></Link>;
+          return (
+            <Link href={url}>
+              <a className="hover:text-gray-400 font-normal">{children}</a>
+            </Link>
+          );
         } else {
-          return <a href={url} target="_blank" rel="noreferrer" className="hover:text-gray-400 font-normal">{children}</a>;
+          return (
+            <a href={url} target="_blank" rel="noreferrer" className="hover:text-gray-400 font-normal">
+              {children}
+            </a>
+          );
         }
       };
 

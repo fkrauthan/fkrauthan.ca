@@ -13,5 +13,5 @@ technologies:
 
 A small web tool to convert canadian NOTAM (notice to airman) to a KML network
 link feed so that it can be used inside Google Earth Pro for flight planning.
-This is a small side project to [notam.ca](https://notam.ca) and is used by 
+This is a small side project to [notam.ca](https://notam.ca) and is used by
 an aviation service daily.
