@@ -17,7 +17,7 @@ import WorkEntry from "../components/resume/work/WorkEntry";
 
 function SkillsSection() {
   return (
-    <ul className="list-none">
+    <ul className="list-none space-y-1">
       <SkillList title="Kotlin / Java">
         <SkillListItem title="Ktor" />
         <SkillListItem title="Clikt" />
@@ -137,8 +137,17 @@ function Sidebar({ label }) {
       </SidebarSection>
 
       <SidebarSection title="Education">
-        <h3 className="font-semibold">IT Specialist for Application Development</h3>
-        <p>2009 - 2012 Vocational school for information technology Munich</p>
+        <div className="space-y-1">
+          <div>
+            <h3 className="font-semibold">Management Essentials</h3>
+            <p>2022 Harvard Business School Online</p>
+          </div>
+
+          <div>
+            <h3 className="font-semibold">IT Specialist for Application Development</h3>
+            <p>2009 - 2012 Vocational school for information technology Munich</p>
+          </div>
+        </div>
       </SidebarSection>
 
       <SidebarSection title="Languages">

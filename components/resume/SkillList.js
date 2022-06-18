@@ -12,7 +12,7 @@ export default function SkillList({ title, children }) {
   return (
     <li>
       <div>{title}</div>
-      <p className="leading-8">{children}</p>
+      <p>{children}</p>
     </li>
   );
 }
