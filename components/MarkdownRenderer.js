@@ -1,4 +1,5 @@
 import { memo } from "react";
+import Link from "next/link";
 
 /* eslint-disable react/display-name */
 const getComponent = (node) => {
@@ -33,6 +34,15 @@ const getComponent = (node) => {
 
     case "list":
       return ({ children }) => <ul>{children}</ul>;
+
+    case "link":
+      return ({ url, children }) => {
+        if (url.startsWith("/")) {
+          return <Link href={url}><a className="hover:text-gray-400 font-normal">{children}</a></Link>;
+        } else {
+          return <a href={url} target="_blank" rel="noreferrer" className="hover:text-gray-400 font-normal">{children}</a>;
+        }
+      };
 
     case "listItem":
       return ({ children }) => <li>{children}</li>;
