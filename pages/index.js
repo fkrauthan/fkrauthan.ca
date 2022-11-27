@@ -45,16 +45,16 @@ function HomePageContent() {
         </div>
       </div>
       <div className="flex flex-row w-full justify-center pb-12">
-        <Link href="/about-me">
-          <a className="px-10 py-2 bg-yellow-500 dark:bg-yellow-600 dark:hover:border-red dark:hover:bg-yellow-500 text-center rounded-full shadow-md text-lg hover:bg-yellow-100 hover:border-red mx-2">
-            Get to know me
-          </a>
+        <Link
+          href="/about-me"
+          className="px-10 py-2 bg-yellow-500 dark:bg-yellow-600 dark:hover:border-red dark:hover:bg-yellow-500 text-center rounded-full shadow-md text-lg hover:bg-yellow-100 hover:border-red mx-2">
+          Get to know me
         </Link>
 
-        <Link href="/projects">
-          <a className="px-10 py-2 bg-yellow-500 dark:bg-yellow-600 dark:hover:border-red dark:hover:bg-yellow-500 text-center rounded-full shadow-md text-lg hover:bg-yellow-100 hover:border-red mx-2">
-            See what I can do
-          </a>
+        <Link
+          href="/projects"
+          className="px-10 py-2 bg-yellow-500 dark:bg-yellow-600 dark:hover:border-red dark:hover:bg-yellow-500 text-center rounded-full shadow-md text-lg hover:bg-yellow-100 hover:border-red mx-2">
+          See what I can do
         </Link>
       </div>
     </>

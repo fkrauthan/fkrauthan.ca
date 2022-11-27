@@ -39,8 +39,8 @@ const getComponent = (node) => {
       return ({ url, children }) => {
         if (url.startsWith("/")) {
           return (
-            <Link href={url}>
-              <a className="hover:text-gray-400 font-normal">{children}</a>
+            <Link href={url} className="hover:text-gray-400 font-normal">
+              {children}
             </Link>
           );
         } else {

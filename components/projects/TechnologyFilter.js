@@ -12,8 +12,8 @@ function TechnologyFilterOption({ slug, name, activeTechnology }) {
 
   return (
     <li className="inline-block">
-      <Link href={`/projects${urlSuffix}`}>
-        <a className={linkClassName}>{name}</a>
+      <Link href={`/projects${urlSuffix}`} className={linkClassName}>
+        {name}
       </Link>
     </li>
   );
