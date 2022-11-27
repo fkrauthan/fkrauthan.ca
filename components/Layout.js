@@ -7,7 +7,6 @@ import PiwikAnalytics from "./PiwikAnalytics";
 
 function Layout({ children, pageTitle, pageDescription, headerContent, headerClassName, hideTopNavigation }) {
   const router = useRouter();
-  console.log("Render Layout");
 
   return (
     <>
