@@ -2,7 +2,7 @@
   "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
   "basics": {
     "name": "Florian Krauthan",
-    "label": "ERP Development Lead at FISPAN",
+    "label": "ERP/Apps Engineering Lead at FISPAN",
     "image": "",
     "email": "fkrauthan@gmx.net",
     "phone": "+1 604 396 1991",
@@ -28,9 +28,19 @@
   "work": [
     {
       "name": "FISPAN",
+      "position": "ERP/Apps Engineering Lead",
+      "startDate": "2023-02-28",
+      "endDate": "",
+      "highlights": [],
+      "summary": "Leading two teams responsible for all client-facing systems (ERPs as well as internal/external tools). Developing and implementing development and QA best practices as well as doing continued architecture reviews.",
+      "url": "https://www.linkedin.com/company/fispan/",
+      "location": "Vancouver, Canada"
+    },
+    {
+      "name": "FISPAN",
       "position": "ERP Development Lead",
       "startDate": "2019-05-31",
-      "endDate": "",
+      "endDate": "2023-02-28",
       "highlights": [],
       "summary": "Leading a team of five developers, one QA and one Coop in a SCRUM setup to deliver quality enhancements to our existing ERP's as well as integrating brand new ERP's into the FISPAN platform.",
       "url": "https://www.linkedin.com/company/fispan/",
@@ -176,7 +186,18 @@
     }
   ],
   "awards": [],
-  "certificates": [],
+  "certificates": [
+    {
+      "name": "Private Pilot License",
+      "issuer": "Transport Canada - Transports Canada",
+      "startDate": "2020-10-31"
+    },
+    {
+      "name": "Management Essentials",
+      "issuer": "Harvard Business School Online",
+      "startDate": "2022-03-31"
+    }
+  ],
   "publications": [],
   "skills": [
     {
