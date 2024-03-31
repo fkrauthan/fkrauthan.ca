@@ -10,8 +10,8 @@ function ThemedIcon({ component: Component, lightColor = "#000000", darkColor = 
   const color = !isMounted
     ? lightColor
     : theme === "dark" || (theme === "system" && systemTheme === "dark")
-    ? darkColor
-    : lightColor;
+      ? darkColor
+      : lightColor;
 
   return (
     <div style={{ width, height, display: "inline-block" }} className={className}>
