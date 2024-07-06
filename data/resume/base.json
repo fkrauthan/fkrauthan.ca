@@ -2,7 +2,7 @@
   "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
   "basics": {
     "name": "Florian Krauthan",
-    "label": "ERP/Apps Engineering Manager at FISPAN",
+    "label": "Senior Software Engineer (Management Track) at Warner Music",
     "image": "",
     "email": "fkrauthan@gmx.net",
     "phone": "+1 604 396 1991",
@@ -27,10 +27,29 @@
   },
   "work": [
     {
+      "name": "Warner Music Group",
+      "position": "Senior Software Engineer (Management Track)",
+      "startDate": "2024-07-31",
+      "endDate": "",
+      "highlights": [],
+      "url": "https://www.linkedin.com/company/warner-music-group/",
+      "location": "Vancouver, British Columbia, Canada"
+    },
+    {
+      "name": "Cogindo Solutions Inc.",
+      "position": "President",
+      "startDate": "2015-02-28",
+      "endDate": "",
+      "highlights": [],
+      "summary": "Building custom software to full fill the customers needs. Some projects include:  Prototype of a mobile game to teach science and a sailing school management software.",
+      "url": "",
+      "location": "Vancouver, Canada"
+    },
+    {
       "name": "FISPAN",
       "position": "ERP/Apps Engineering Manager",
       "startDate": "2023-02-28",
-      "endDate": "",
+      "endDate": "2024-07-31",
       "highlights": [],
       "summary": "Leading two teams responsible for all client-facing systems (ERPs as well as internal/external tools). Developing and implementing development and QA best practices as well as doing continued architecture reviews.",
       "url": "https://www.linkedin.com/company/fispan/",
@@ -54,16 +73,6 @@
       "highlights": [],
       "summary": "Creating the very first iteration of the Netsuite and Intacct extension. In addition to that building and designing the internal sync engine that powers a lot of FISPAN's magic.",
       "url": "https://www.linkedin.com/company/fispan/",
-      "location": "Vancouver, Canada"
-    },
-    {
-      "name": "Cogindo Solutions Inc.",
-      "position": "President",
-      "startDate": "2015-02-28",
-      "endDate": "",
-      "highlights": [],
-      "summary": "Building custom software to full fill the customers needs. Some projects include:  Prototype of a mobile game to teach science and a sailing school management software.",
-      "url": "",
       "location": "Vancouver, Canada"
     },
     {
