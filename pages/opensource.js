@@ -59,7 +59,7 @@ export function OpensourcePage({ projects }) {
           </blockquote>
 
           <div className="mb-10">
-            <div className="grid gap-4 grid-cols-1 md:grid-cols-2">
+            <div className="grid gap-4 grid-cols-1 md:grid-cols-2 2xl:grid-cols-3">
               {projects.map(({ slug, markdown, meta: { title, link_github, technology_base, technologies } }) => (
                 <Project
                   key={slug}
