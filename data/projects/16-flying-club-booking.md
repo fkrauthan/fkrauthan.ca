@@ -1,7 +1,7 @@
 ---
 title: Flying Club Booking
 development_start: "2023-03-03"
-in_active_development: yes
+in_active_development: no
 technology_base: Javascript
 technologies:
   - SvelteKit

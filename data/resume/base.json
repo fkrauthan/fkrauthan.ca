@@ -2,7 +2,7 @@
   "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
   "basics": {
     "name": "Florian Krauthan",
-    "label": "Senior Software Engineer (Management Track) at Warner Music",
+    "label": "Software Engineering Manager at Warner Music",
     "image": "",
     "email": "fkrauthan@gmx.net",
     "phone": "+1 604 396 1991",
@@ -28,10 +28,20 @@
   "work": [
     {
       "name": "Warner Music Group",
-      "position": "Senior Software Engineer (Management Track)",
-      "startDate": "2024-07-31",
+      "position": "Software Engineering Manager",
+      "startDate": "2025-01-01",
       "endDate": "",
       "highlights": [],
+      "url": "https://www.linkedin.com/company/warner-music-group/",
+      "location": "Vancouver, British Columbia, Canada"
+    },
+    {
+      "name": "Warner Music Group",
+      "position": "Software Engineering Team Lead",
+      "startDate": "2024-07-31",
+      "endDate": "2025-01-01",
+      "highlights": [],
+      "summary": "Helping polish and expand our asset upload capabilities for further processing in the digital supply chain (DSC).",
       "url": "https://www.linkedin.com/company/warner-music-group/",
       "location": "Vancouver, British Columbia, Canada"
     },
@@ -82,7 +92,7 @@
       "endDate": "2017-11-30",
       "highlights": [],
       "summary": "Developed on the Go99 App. An application that allows independent truck drivers to bid on posted jobs instead of having to go through am external (and often expensive) third party broker. Worked primarily on the backend and help get the idea of the ground.",
-      "url": "https://www.linkedin.com/company/surespan-digital/",
+      "url": "",
       "location": "North Vancouver, Canada"
     },
     {

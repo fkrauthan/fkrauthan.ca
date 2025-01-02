@@ -1,7 +1,7 @@
 ---
 title: nss-run
 development_start: "2016-12-03"
-in_active_development: yes
+in_active_development: no
 technology_base: Javascript
 technologies:
   - NodeJS
