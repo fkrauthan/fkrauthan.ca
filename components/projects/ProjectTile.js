@@ -1,9 +1,8 @@
-import GlobeOutline from "react-ionicons/lib/GlobeOutline";
-import LogoGithub from "react-ionicons/lib/LogoGithub";
+import GlobeOutline from "~icons/ion/globe-outline";
+import LogoGithub from "~icons/ion/logo-github";
 
 import ActivePill from "../ActivePill";
 import MarkdownRenderer from "../MarkdownRenderer";
-import ThemedIcon from "../ThemedIcon";
 import ProjectLink from "./ProjectLink";
 
 export function TechnologyItem({ title }) {

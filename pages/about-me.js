@@ -1,10 +1,10 @@
-import HomeOutline from "react-ionicons/lib/HomeOutline";
-import LogoGithub from "react-ionicons/lib/LogoGithub";
-import LogoLinkedin from "react-ionicons/lib/LogoLinkedin";
-import LogoStackoverflow from "react-ionicons/lib/LogoStackoverflow";
-import LogoTwitter from "react-ionicons/lib/LogoTwitter";
-import LogoXing from "react-ionicons/lib/LogoXing";
-import MailOutline from "react-ionicons/lib/MailOutline";
+import HomeOutline from "~icons/ion/home-outline";
+import LogoGithub from "~icons/ion/logo-github";
+import LogoLinkedin from "~icons/ion/logo-linkedin";
+import LogoStackoverflow from "~icons/ion/logo-stackoverflow";
+import LogoTwitter from "~icons/ion/logo-twitter";
+import LogoXing from "~icons/ion/logo-xing";
+import MailOutline from "~icons/ion/mail-outline";
 
 import ActivePill from "../components/ActivePill";
 import Layout from "../components/Layout";

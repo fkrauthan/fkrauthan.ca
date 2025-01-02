@@ -1,8 +1,8 @@
 import clsx from "clsx";
 import Link from "next/link";
 import { useState } from "react";
-import CloseOutline from "react-ionicons/lib/CloseOutline";
-import MenuOutline from "react-ionicons/lib/MenuOutline";
+import CloseOutline from "~icons/ion/close-outline";
+import MenuOutline from "~icons/ion/menu-outline";
 
 import ThemeSwitcher from "./ThemeSwitcher";
 import ThemedIcon from "./ThemedIcon";

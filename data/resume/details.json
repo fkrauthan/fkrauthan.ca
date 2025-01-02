@@ -2,15 +2,7 @@
   "Warner Music Group": {
     "website": "https://www.wmg.com/",
     "Senior Software Engineer (Management Track)": {
-      "technologies": [
-        "Python 3",
-        "PostgreSQL",
-        "Rust",
-        "Docker",
-        "ReactJS",
-        "AWS",
-        "Pulumi"
-      ]
+      "technologies": ["Python 3", "PostgreSQL", "Rust", "Docker", "ReactJS", "AWS", "Pulumi"]
     }
   },
   "FISPAN": {

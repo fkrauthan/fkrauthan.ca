@@ -1,4 +1,4 @@
-import EarthOutline from "react-ionicons/lib/EarthOutline";
+import EarthOutline from "~icons/ion/earth-outline";
 
 import ThemedIcon from "../../ThemedIcon";
 import DaysWorked, { calculateDaysWorked } from "./DaysWorked";

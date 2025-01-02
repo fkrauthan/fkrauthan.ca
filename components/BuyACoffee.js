@@ -1,4 +1,4 @@
-import Cafe from "react-ionicons/lib/Cafe";
+import Cafe from "~icons/ion/cafe";
 
 import ThemedIcon from "./ThemedIcon";
 

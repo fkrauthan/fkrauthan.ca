@@ -1,8 +1,7 @@
-import LogoGithub from "react-ionicons/lib/LogoGithub";
+import LogoGithub from "~icons/ion/logo-github";
 
 import Layout from "../components/Layout";
 import MarkdownRenderer from "../components/MarkdownRenderer";
-import ThemedIcon from "../components/ThemedIcon";
 import ProjectLink from "../components/projects/ProjectLink";
 import SectionHeader from "../components/resume/SectionHeader";
 
