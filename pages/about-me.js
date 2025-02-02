@@ -1,8 +1,8 @@
 import HomeOutline from "~icons/ion/home-outline";
 import LogoGithub from "~icons/ion/logo-github";
 import LogoLinkedin from "~icons/ion/logo-linkedin";
+import LogoMastodon from "~icons/ion/logo-mastodon";
 import LogoStackoverflow from "~icons/ion/logo-stackoverflow";
-import LogoTwitter from "~icons/ion/logo-twitter";
 import LogoXing from "~icons/ion/logo-xing";
 import MailOutline from "~icons/ion/mail-outline";
 
@@ -129,7 +129,11 @@ function Sidebar({ label }) {
         />
         <SidebarLinkEntry IconComponent={LogoLinkedin} title="LinkedIn" href="https://www.linkedin.com/in/fkrauthan/" />
         <SidebarLinkEntry IconComponent={LogoXing} title="Xing" href="https://www.xing.com/profile/Florian_Krauthan" />
-        <SidebarLinkEntry IconComponent={LogoTwitter} title="@fkrauthan" href="https://twitter.com/fkrauthan" />
+        <SidebarLinkEntry
+          IconComponent={LogoMastodon}
+          title="@fkrauthan"
+          href="https://mastodon.cogindo.net/@fkrauthan"
+        />
       </SidebarSection>
 
       <SidebarSection title="Skills &amp; Tools">
