@@ -26,6 +26,13 @@ function SkillsSection() {
         <SkillListItem title="EJB3" />
       </SkillList>
 
+      <SkillList title="Python">
+        <SkillListItem title="FastAPI" />
+        <SkillListItem title="SQLAlchemy" />
+        <SkillListItem title="Boto3" />
+        <SkillListItem title="Click" />
+      </SkillList>
+
       <SkillList title="Rust">
         <SkillListItem title="Serde" />
         <SkillListItem title="reqwest" />
@@ -38,11 +45,14 @@ function SkillsSection() {
         <SkillListItem title="CakePHP" />
       </SkillList>
 
-      <SkillList title="JavaScript">
+      <SkillList title="JavaScript / TypeScript">
+        <SkillListItem title="Svelte" />
+        <SkillListItem title="SvelteKit" />
         <SkillListItem title="React" />
         <SkillListItem title="React Native" />
         <SkillListItem title="Twitter Bootstrap" />
         <SkillListItem title="tailwindcss" />
+        <SkillListItem title="Vite" />
         <SkillListItem title="Webpack 4/5" />
         <SkillListItem title="Node.js" />
         <SkillListItem title="Express.js" />
@@ -53,7 +63,7 @@ function SkillsSection() {
       <SkillList title="Infrastructure / Hosting / DB">
         <SkillListItem title="Ansible" />
         <SkillListItem title="AWS" />
-        <SkillListItem title="Heroku" />
+        <SkillListItem title="Terraform" />
         <SkillListItem title="Docker" />
         <SkillListItem title="Kubernetes" />
         <SkillListItem title="PostgreSQL" />
