@@ -26,6 +26,8 @@ function Layout({ children, pageTitle, pageDescription, headerContent, headerCla
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <link rel="icon" type="image/png" href="/favicon.png" />
 
+        <link rel="me" href="https://mastodon.cogindo.net/@fkrauthan" />
+
         <PiwikAnalytics />
       </Head>
 
