@@ -1,16 +1,19 @@
+import PlausibleProvider from "next-plausible";
 import { ThemeProvider } from "next-themes";
-
-import usePiwikAnalytics from "../components/hooks/usePiwikAnalytics";
 
 import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }) {
-  usePiwikAnalytics();
+  const domain = process.env.NEXT_PUBLIC_PLAUSIBLE_DOMAIN;
+  const customDomain = process.env.NEXT_PUBLIC_PLAUSIBLE_HOST;
+  const enabled = process.env.NEXT_PUBLIC_PLAUSIBLE_ENABLED === "1";
 
   return (
-    <ThemeProvider attribute="class">
-      <Component {...pageProps} />
-    </ThemeProvider>
+    <PlausibleProvider domain={domain} customDomain={customDomain} enabled={enabled} selfHosted>
+      <ThemeProvider attribute="class">
+        <Component {...pageProps} />
+      </ThemeProvider>
+    </PlausibleProvider>
   );
 }
 

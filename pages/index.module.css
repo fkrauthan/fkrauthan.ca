@@ -1,7 +1,8 @@
 .header {
   background-color: #ffe9d5;
   opacity: 0.7;
-  background-image: radial-gradient(#b70a00 0.55px, transparent 0.55px), radial-gradient(#b70a00 0.55px, #ffe9d5 0.55px);
+  background-image:
+    radial-gradient(#b70a00 0.55px, transparent 0.55px), radial-gradient(#b70a00 0.55px, #ffe9d5 0.55px);
   background-size: 22px 22px;
   background-position:
     0 0,

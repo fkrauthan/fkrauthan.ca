@@ -3,7 +3,6 @@ import { useRouter } from "next/router";
 
 import BuyACoffee from "./BuyACoffee";
 import Header from "./Header";
-import PiwikAnalytics from "./PiwikAnalytics";
 
 function Layout({ children, pageTitle, pageDescription, headerContent, headerClassName, hideTopNavigation }) {
   const router = useRouter();
@@ -27,8 +26,6 @@ function Layout({ children, pageTitle, pageDescription, headerContent, headerCla
         <link rel="icon" type="image/png" href="/favicon.png" />
 
         <link rel="me" href="https://mastodon.cogindo.net/@fkrauthan" />
-
-        <PiwikAnalytics />
       </Head>
 
       <Header content={headerContent} headerClassName={headerClassName} hideTopNavigation={hideTopNavigation} />
