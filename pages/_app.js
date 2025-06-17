@@ -9,7 +9,7 @@ function MyApp({ Component, pageProps }) {
   const enabled = process.env.NEXT_PUBLIC_PLAUSIBLE_ENABLED === "1";
 
   return (
-    <PlausibleProvider domain={domain} customDomain={customDomain} enabled={enabled} selfHosted trackOutboundLinks>
+    <PlausibleProvider domain={domain} customDomain={customDomain} enabled={enabled} trackOutboundLinks>
       <ThemeProvider attribute="class">
         <Component {...pageProps} />
       </ThemeProvider>
