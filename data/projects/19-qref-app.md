@@ -9,7 +9,7 @@ technologies:
   - Claude Code
   - Cursor
 links:
-    website: https://qref-app.web.app/
+  website: https://qref-app.web.app/
 ---
 
 QRef (Quick Reference) is a modern Progressive Web App for browsing and searching reference databases from CSV files.

@@ -60,6 +60,12 @@ function SkillsSection() {
         <SkillListItem title="jQuery" />
       </SkillList>
 
+      <SkillList title="AI">
+        <SkillListItem title="Claude" />
+        <SkillListItem title="Claude Code" />
+        <SkillListItem title="Cursor" />
+      </SkillList>
+
       <SkillList title="Infrastructure / Hosting / DB">
         <SkillListItem title="Ansible" />
         <SkillListItem title="AWS" />
