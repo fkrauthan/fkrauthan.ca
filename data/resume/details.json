@@ -1,13 +1,58 @@
 {
   "Warner Music Group": {
     "website": "https://www.wmg.com/",
-    "Senior Software Engineer (Management Track)": {
-      "technologies": ["Python 3", "PostgreSQL", "Rust", "Docker", "ReactJS", "AWS", "Pulumi"]
+    "Software Engineering Manager": {
+      "technologies": [
+        "Google Gemini",
+        "Cursor",
+        "Google AppScripts",
+        "Python 3",
+        "PostgreSQL",
+        "Rust",
+        "TypeScript",
+        "Docker",
+        "ReactJS",
+        "AWS",
+        "Pulumi",
+        "LocalStack"
+      ]
+    },
+    "Software Engineering Team Lead": {
+      "technologies": [
+        "Python 3",
+        "PostgreSQL",
+        "Rust",
+        "TypeScript",
+        "Docker",
+        "ReactJS",
+        "AWS",
+        "Pulumi",
+        "LocalStack"
+      ]
     }
   },
   "FISPAN": {
     "website": "https://fispan.com",
-    "ERP Development Lead": {
+    "ERP/Apps Engineering Manager": {
+      "technologies": [
+        "Java 8/11",
+        "Kotlin",
+        "Spring Boot",
+        "Ktor",
+        "PostgreSQL",
+        "MongoDB",
+        "RabbitMQ",
+        "ReactJS",
+        "Node.js",
+        "NetSuite (SuiteScript 2.X)",
+        "Intacct (Platform Services)",
+        "Python 3",
+        "Rust",
+        "Docker",
+        "Kubernetes"
+      ]
+    },
+    "ERP Engineering Manager": {
       "technologies": [
         "Java 8/11",
         "Kotlin",
