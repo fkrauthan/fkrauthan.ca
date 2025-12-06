@@ -6,7 +6,7 @@ module.exports = withBundleAnalyzer({
   reactStrictMode: true,
   webpack(config) {
     config.plugins.push(
-      require("unplugin-icons/webpack").default({
+      require("unplugin-icons/webpack")({
         compiler: "jsx",
         jsx: "react",
       })
