@@ -4,12 +4,16 @@ import { ThemeProvider } from "next-themes";
 import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }) {
-  const domain = process.env.NEXT_PUBLIC_PLAUSIBLE_DOMAIN;
   const customDomain = process.env.NEXT_PUBLIC_PLAUSIBLE_HOST;
   const enabled = process.env.NEXT_PUBLIC_PLAUSIBLE_ENABLED === "1";
 
   return (
-    <PlausibleProvider domain={domain} customDomain={customDomain} enabled={enabled} trackOutboundLinks>
+    <PlausibleProvider
+      src={`${customDomain}/js/pa-axkESUYVPVBXzmkVDK5rw.js`}
+      enabled={enabled}
+      init={{
+        endpoint: `${customDomain}/api/event`,
+      }}>
       <ThemeProvider attribute="class">
         <Component {...pageProps} />
       </ThemeProvider>
