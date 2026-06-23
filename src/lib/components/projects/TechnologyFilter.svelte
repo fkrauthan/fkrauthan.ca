@@ -34,7 +34,7 @@
 {/snippet}
 
 <div class="text-center">
-  <ul class="space-x-4">
+  <ul class="space-x-2 lg:space-x-4 md:space-x-3">
     {@render TechnologyFilterOption("", "All")}
 
     {@render Separator()}

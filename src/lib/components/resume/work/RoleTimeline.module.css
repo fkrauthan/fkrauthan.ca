@@ -1,3 +1,5 @@
+@reference "../../../../app.css";
+
 .timeline ul,
 .timeline li {
   @apply list-none p-0 pl-1;

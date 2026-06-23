@@ -54,5 +54,5 @@
   pageTitle="Welcome"
   pageDescription="Florian Krauthan, a Vancouver based software developer, who loves to eat, breathe and sleep technology to make the world a better place."
   {headerContent}
-  headerClassName={clsx(styles.header, "dark:bg-none dark:opacity-100 dark:bg-slate-900")}
+  headerClassName={styles.header}
   hideTopNavigation />

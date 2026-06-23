@@ -9,7 +9,7 @@
 <a
   {href}
   style="text-decoration: none; width: 34px; height: 34px;"
-  class="inline-block border p border-yellow-500 rounded-full border-opacity-0 hover:border-opacity-100"
+  class="inline-block border p border-yellow-500/0 rounded-full hover:border-yellow-500/100"
   {title}
   target="_blank"
   rel="noopener noreferrer">

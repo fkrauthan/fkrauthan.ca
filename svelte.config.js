@@ -10,7 +10,7 @@ const config = {
       pages: "out",
       assets: "out",
       fallback: "404.html",
-      precompress: false,
+      precompress: true,
       strict: true,
     }),
   },
