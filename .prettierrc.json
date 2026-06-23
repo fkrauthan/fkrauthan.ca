@@ -6,8 +6,9 @@
   "bracketSameLine": true,
   "trailingComma": "es5",
 
-  "plugins": ["@trivago/prettier-plugin-sort-imports"],
+  "plugins": ["prettier-plugin-svelte", "@trivago/prettier-plugin-sort-imports"],
   "importOrder": ["^[^.]", "^[./].*(?<!\\.css)$", "^[./].*\\.(css)$"],
   "importOrderSeparation": true,
-  "importOrderParserPlugins": ["jsx"]
+  "importOrderParserPlugins": ["typescript"],
+  "overrides": [{ "files": "*.svelte", "options": { "parser": "svelte" } }]
 }

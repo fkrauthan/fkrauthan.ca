@@ -9,7 +9,7 @@ COPY pnpm-lock.yaml package.json ./
 RUN pnpm install --frozen-lockfile
 
 COPY . .
-RUN IS_DOCKER_BUILD=true pnpm build
+RUN pnpm build
 
 
 # Build header config file
@@ -19,7 +19,7 @@ RUN cat <<'EOF' > /sws.toml
 [advanced]
 
 [[advanced.headers]]
-source = "/_next/static/**"
+source = "/_app/immutable/**"
 [advanced.headers.headers]
 Cache-Control = "public, max-age=31536000, immutable"
 

@@ -1,8 +1,11 @@
-### NextJS
-.next/
+### SvelteKit
+.svelte-kit/
 out/
+build/
 node_modules/
 .env*.local
+vite.config.ts.timestamp-*
+vite.config.js.timestamp-*
 
 
 ### JetBrains template
