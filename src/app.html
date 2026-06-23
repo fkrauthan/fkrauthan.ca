@@ -9,8 +9,7 @@
         try {
           var stored = localStorage.getItem("theme") || "system";
           var isDark =
-            stored === "dark" ||
-            (stored === "system" && window.matchMedia("(prefers-color-scheme: dark)").matches);
+            stored === "dark" || (stored === "system" && window.matchMedia("(prefers-color-scheme: dark)").matches);
           var el = document.documentElement;
           el.classList.remove("light", "dark");
           el.classList.add(isDark ? "dark" : "light");
