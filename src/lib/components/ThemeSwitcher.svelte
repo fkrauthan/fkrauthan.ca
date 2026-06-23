@@ -1,6 +1,5 @@
 <script lang="ts">
   import { themeStore } from "$lib/theme.svelte";
-  import clsx from "clsx";
   import { onMount } from "svelte";
 
   let { class: className = undefined }: { class?: string } = $props();
@@ -15,7 +14,7 @@
   }
 </script>
 
-<button aria-label="Toggle Dark Mode" type="button" class={clsx("ml-2 p-3 h-12 w-12", className)} onclick={toggleTheme}>
+<button aria-label="Toggle Dark Mode" type="button" class={["ml-2 p-3 h-12 w-12", className]} onclick={toggleTheme}>
   {#if mounted}
     <svg
       xmlns="http://www.w3.org/2000/svg"

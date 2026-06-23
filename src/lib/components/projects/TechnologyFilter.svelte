@@ -1,6 +1,5 @@
 <script lang="ts">
   import type { BaseTechnology } from "$lib/types";
-  import clsx from "clsx";
 
   let {
     technologies,
@@ -17,11 +16,11 @@
   <li class="inline-block">
     <a
       href={`/projects${urlSuffix}`}
-      class={clsx(
+      class={[
         "block text-center px-4 py-1 text-lg",
         "rounded-md hover:bg-yellow-100 dark:hover:bg-yellow-500",
-        isActive && "bg-yellow-300 dark:bg-yellow-600"
-      )}>
+        isActive && "bg-yellow-300 dark:bg-yellow-600",
+      ]}>
       {name}
     </a>
   </li>

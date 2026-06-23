@@ -1,5 +1,4 @@
 <script lang="ts">
-  import clsx from "clsx";
   import type { Snippet } from "svelte";
   import CloseOutline from "~icons/ion/close-outline";
   import MenuOutline from "~icons/ion/menu-outline";
@@ -31,7 +30,7 @@
   </a>
 {/snippet}
 
-<header class={clsx("header w-full", content && "min-h-screen", "flex flex-col justify-between", headerClassName)}>
+<header class={["header w-full", content && "min-h-screen", "flex flex-col justify-between", headerClassName]}>
   <nav
     class="flex flex-col sm:flex-row w-full justify-between items-center px-4 sm:px-6 py-1 bg-transparent shadow sm:shadow-none">
     <div
@@ -54,11 +53,11 @@
     {#if !hideTopNavigation}
       <div
         id="menu"
-        class={clsx(
+        class={[
           "w-full pl-5 sm:pl-0 sm:w-auto self-end sm:self-center",
           !showMobileMenu && "hidden",
-          "sm:flex flex-col sm:flex-row items-center h-full py-1 pb-4 sm:py-0 sm:pb-0"
-        )}>
+          "sm:flex flex-col sm:flex-row items-center h-full py-1 pb-4 sm:py-0 sm:pb-0",
+        ]}>
         {@render MenuLink("/about-me", "About Me")}
         {@render MenuLink("/projects", "Projects")}
         {@render MenuLink("/opensource", "Open-source")}

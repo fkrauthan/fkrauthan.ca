@@ -1,5 +1,6 @@
 <script lang="ts">
   import { page } from "$app/state";
+  import { serializeJsonLd } from "$lib/jsonLd";
   import type { Snippet } from "svelte";
 
   import BuyACoffee from "./BuyACoffee.svelte";
@@ -12,6 +13,7 @@
     headerContent,
     headerClassName,
     hideTopNavigation = false,
+    jsonLd,
   }: {
     children?: Snippet;
     pageTitle: string;
@@ -19,6 +21,7 @@
     headerContent?: Snippet;
     headerClassName?: string;
     hideTopNavigation?: boolean;
+    jsonLd?: Record<string, unknown> | Record<string, unknown>[];
   } = $props();
 </script>
 
@@ -39,6 +42,10 @@
   <link rel="icon" type="image/png" href="/favicon.png" />
 
   <link rel="me" href="https://mastodon.cogindo.net/@fkrauthan" />
+
+  {#if jsonLd}
+    {@html serializeJsonLd(jsonLd)}
+  {/if}
 </svelte:head>
 
 <Header content={headerContent} {headerClassName} {hideTopNavigation} />

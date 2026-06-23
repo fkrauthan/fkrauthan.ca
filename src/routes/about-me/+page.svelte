@@ -1,6 +1,7 @@
 <script lang="ts">
   import ActivePill from "$lib/components/ActivePill.svelte";
   import Layout from "$lib/components/Layout.svelte";
+  import { profilePage } from "$lib/jsonLd";
   import SectionHeader from "$lib/components/resume/SectionHeader.svelte";
   import SkillList from "$lib/components/resume/SkillList.svelte";
   import SkillListItem from "$lib/components/resume/SkillListItem.svelte";
@@ -8,6 +9,8 @@
   import SidebarLinkEntry from "$lib/components/resume/sidebar/SidebarLinkEntry.svelte";
   import SidebarSection from "$lib/components/resume/sidebar/SidebarSection.svelte";
   import WorkEntry from "$lib/components/resume/work/WorkEntry.svelte";
+  import { EDUCATION, LANGUAGES, SKILL_GROUPS, SOCIAL_LINKS } from "$lib/profile";
+  import type { Component } from "svelte";
   import HomeOutline from "~icons/ion/home-outline";
   import LogoGithub from "~icons/ion/logo-github";
   import LogoLinkedin from "~icons/ion/logo-linkedin";
@@ -19,69 +22,25 @@
   import type { PageData } from "./$types";
 
   let { data }: { data: PageData } = $props();
+
+  const SOCIAL_ICONS: Record<string, Component> = {
+    GitHub: LogoGithub,
+    StackOverflow: LogoStackoverflow,
+    LinkedIn: LogoLinkedin,
+    Xing: LogoXing,
+    Mastodon: LogoMastodon,
+  };
 </script>
 
 {#snippet SkillsSection()}
   <ul class="list-none space-y-1">
-    <SkillList title="Kotlin / Java">
-      <SkillListItem title="Ktor" />
-      <SkillListItem title="Clikt" />
-      <SkillListItem title="Spring Boot" />
-      <SkillListItem title="JSF/JSF2" />
-      <SkillListItem title="EJB3" />
-    </SkillList>
-
-    <SkillList title="Python">
-      <SkillListItem title="FastAPI" />
-      <SkillListItem title="SQLAlchemy" />
-      <SkillListItem title="Boto3" />
-      <SkillListItem title="Click" />
-    </SkillList>
-
-    <SkillList title="Rust">
-      <SkillListItem title="Serde" />
-      <SkillListItem title="reqwest" />
-      <SkillListItem title="StructOpt" />
-    </SkillList>
-
-    <SkillList title="PHP">
-      <SkillListItem title="Symfony" />
-      <SkillListItem title="YiiFramework" />
-      <SkillListItem title="CakePHP" />
-    </SkillList>
-
-    <SkillList title="JavaScript / TypeScript">
-      <SkillListItem title="Svelte" />
-      <SkillListItem title="SvelteKit" />
-      <SkillListItem title="React" />
-      <SkillListItem title="React Native" />
-      <SkillListItem title="Twitter Bootstrap" />
-      <SkillListItem title="tailwindcss" />
-      <SkillListItem title="Vite" />
-      <SkillListItem title="Webpack 4/5" />
-      <SkillListItem title="Node.js" />
-      <SkillListItem title="Express.js" />
-      <SkillListItem title="AngularJS" />
-      <SkillListItem title="jQuery" />
-    </SkillList>
-
-    <SkillList title="AI">
-      <SkillListItem title="Claude" />
-      <SkillListItem title="Claude Code" />
-      <SkillListItem title="Cursor" />
-    </SkillList>
-
-    <SkillList title="Infrastructure / Hosting / DB">
-      <SkillListItem title="Ansible" />
-      <SkillListItem title="AWS" />
-      <SkillListItem title="Terraform" />
-      <SkillListItem title="Docker" />
-      <SkillListItem title="Kubernetes" />
-      <SkillListItem title="PostgreSQL" />
-      <SkillListItem title="MySQL" />
-      <SkillListItem title="MongoDB" />
-      <SkillListItem title="SQLite" />
-    </SkillList>
+    {#each SKILL_GROUPS as group}
+      <SkillList title={group.category}>
+        {#each group.items as item}
+          <SkillListItem title={item} />
+        {/each}
+      </SkillList>
+    {/each}
   </ul>
 {/snippet}
 
@@ -112,7 +71,7 @@
 {#snippet Sidebar(label: string)}
   <div
     id="sidebar"
-    class="w-full md:max-w-md p-8 bg-gradient-to-b from-yellow-400 dark:from-yellow-800 dark:via-pink-800 dark:to-purple-700 via-pink-900 to-purple-50">
+    class="w-full md:max-w-md p-8 bg-linear-to-b from-yellow-400 dark:from-yellow-800 dark:via-pink-800 dark:to-purple-700 via-pink-900 to-purple-50">
     <div class="px-2 mb-12">
       <div class="w-48 mx-auto mb-2">
         <img src="/img/fkrauthan.jpg" alt="Profile Picture" class="rounded-full w-48 mx-auto mb-2" />
@@ -135,17 +94,9 @@
     </SidebarSection>
 
     <SidebarSection title="On the Web">
-      <SidebarLinkEntry IconComponent={LogoGithub} title="Github" href="https://github.com/fkrauthan" />
-      <SidebarLinkEntry
-        IconComponent={LogoStackoverflow}
-        title="StackOverflow"
-        href="https://stackoverflow.com/users/1446262/fkrauthan" />
-      <SidebarLinkEntry IconComponent={LogoLinkedin} title="LinkedIn" href="https://www.linkedin.com/in/fkrauthan/" />
-      <SidebarLinkEntry IconComponent={LogoXing} title="Xing" href="https://www.xing.com/profile/Florian_Krauthan" />
-      <SidebarLinkEntry
-        IconComponent={LogoMastodon}
-        title="@fkrauthan"
-        href="https://mastodon.cogindo.net/@fkrauthan" />
+      {#each SOCIAL_LINKS as link}
+        <SidebarLinkEntry IconComponent={SOCIAL_ICONS[link.network]} title={link.title} href={link.url} />
+      {/each}
     </SidebarSection>
 
     <SidebarSection title="Skills &amp; Tools">
@@ -154,23 +105,20 @@
 
     <SidebarSection title="Education">
       <div class="space-y-1">
-        <div>
-          <h3 class="font-semibold">Management Essentials</h3>
-          <p>2022 Harvard Business School Online</p>
-        </div>
-
-        <div>
-          <h3 class="font-semibold">IT Specialist for Application Development</h3>
-          <p>2009 - 2012 Vocational school for information technology Munich</p>
-        </div>
+        {#each EDUCATION as entry}
+          <div>
+            <h3 class="font-semibold">{entry.degree}</h3>
+            <p>{entry.period} {entry.institution}</p>
+          </div>
+        {/each}
       </div>
     </SidebarSection>
 
     <SidebarSection title="Languages">
-      <h3 class="font-semibold">German</h3>
-      <p>Native</p>
-      <h3 class="font-semibold">English</h3>
-      <p>Fluent</p>
+      {#each LANGUAGES as entry}
+        <h3 class="font-semibold">{entry.language}</h3>
+        <p>{entry.fluency}</p>
+      {/each}
     </SidebarSection>
 
     <div class="hidden md:block">
@@ -237,7 +185,8 @@
 
 <Layout
   pageTitle="About me"
-  pageDescription="Learn more about Florian Krauthan, including but not limited to background, skills and interests">
+  pageDescription="Learn more about Florian Krauthan, including but not limited to background, skills and interests"
+  jsonLd={profilePage("/about-me", data.currentPosition)}>
   <div class="flex flex-col md:flex-row-reverse md:m-12 md:my-8 shadow-2xl">
     {@render Sidebar(data.label)}
     {@render MainSection(data.work, data.volunteer)}

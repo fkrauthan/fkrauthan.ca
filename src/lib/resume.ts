@@ -1,7 +1,7 @@
 import { promises as fs } from "fs";
 import path from "path";
 
-import type { ResumeData, ResumeRole, ResumeWork } from "./types";
+import type { CurrentPosition, ResumeData, ResumeRole, ResumeWork } from "./types";
 
 interface BaseWorkEntry {
   name: string;
@@ -101,4 +101,23 @@ export async function loadResumeData(): Promise<ResumeData> {
     work,
     volunteer,
   };
+}
+
+/** Derive the most recent (current) position from already-loaded resume data. */
+export function deriveCurrentPosition(resume: ResumeData): CurrentPosition | null {
+  const currentWork = resume.work.find(({ isCurrent }) => isCurrent) ?? resume.work[0];
+  if (!currentWork) {
+    return null;
+  }
+
+  const currentRole = currentWork.roles.find(({ endDate }) => !endDate) ?? currentWork.roles[0];
+  return {
+    jobTitle: currentRole.position,
+    company: currentWork.company,
+    companyUrl: currentWork.website,
+  };
+}
+
+export async function loadCurrentPosition(): Promise<CurrentPosition | null> {
+  return deriveCurrentPosition(await loadResumeData());
 }

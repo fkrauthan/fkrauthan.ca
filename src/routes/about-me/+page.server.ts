@@ -1,7 +1,11 @@
-import { loadResumeData } from "$lib/resume";
+import { deriveCurrentPosition, loadResumeData } from "$lib/resume";
 
 import type { PageServerLoad } from "./$types";
 
 export const load: PageServerLoad = async () => {
-  return await loadResumeData();
+  const resume = await loadResumeData();
+  return {
+    ...resume,
+    currentPosition: deriveCurrentPosition(resume),
+  };
 };

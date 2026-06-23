@@ -1,8 +1,10 @@
 <script lang="ts">
+  import { page } from "$app/state";
   import Layout from "$lib/components/Layout.svelte";
   import ProjectTile from "$lib/components/projects/ProjectTile.svelte";
   import TechnologyFilter from "$lib/components/projects/TechnologyFilter.svelte";
   import SectionHeader from "$lib/components/resume/SectionHeader.svelte";
+  import { collectionPage } from "$lib/jsonLd";
   import type { BaseTechnology, ProjectTileData } from "$lib/types";
 
   let {
@@ -44,11 +46,25 @@
       return `An array of projects written in ${technology!.name} developed from start to finish.`;
     }
   }
+
+  let jsonLd = $derived(
+    collectionPage({
+      name: getPageTitle(activeTechnology, technologies),
+      description: getPageDescription(activeTechnology, technologies),
+      path: page.url.pathname,
+      items: projects.map(({ meta }) => ({
+        name: meta.title,
+        url: meta.links.website || meta.links.github,
+        keywords: [meta.technology_base, ...meta.technologies],
+      })),
+    })
+  );
 </script>
 
 <Layout
   pageTitle={getPageTitle(activeTechnology, technologies)}
-  pageDescription={getPageDescription(activeTechnology, technologies)}>
+  pageDescription={getPageDescription(activeTechnology, technologies)}
+  {jsonLd}>
   <div class="flex flex-col md:m-12 md:my-8 shadow-2xl">
     <div class="content w-full p-6 sm:p-12">
       <div class="prose dark:prose-invert">

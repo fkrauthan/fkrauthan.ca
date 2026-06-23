@@ -98,3 +98,9 @@ export interface ResumeData {
   work: ResumeWork[];
   volunteer: ResumeVolunteer[];
 }
+
+export interface CurrentPosition {
+  jobTitle: string;
+  company: string;
+  companyUrl: string | null;
+}

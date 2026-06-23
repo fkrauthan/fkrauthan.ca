@@ -3,6 +3,7 @@
   import MarkdownRenderer from "$lib/components/MarkdownRenderer.svelte";
   import ProjectLink from "$lib/components/projects/ProjectLink.svelte";
   import SectionHeader from "$lib/components/resume/SectionHeader.svelte";
+  import { collectionPage } from "$lib/jsonLd";
   import styles from "$lib/styles/opensource.module.css";
   import type { MarkdownNode } from "$lib/types";
   import LogoGithub from "~icons/ion/logo-github";
@@ -10,6 +11,20 @@
   import type { PageData } from "./$types";
 
   let { data }: { data: PageData } = $props();
+
+  let jsonLd = $derived(
+    collectionPage({
+      name: "Open-source Contributions",
+      description:
+        "An assortment of Opensource contributions made by Florian Krauthan to improve and fix cool opensource apps and libraries.",
+      path: "/opensource",
+      items: data.projects.map(({ meta }) => ({
+        name: meta.title.replace("/", " / "),
+        url: meta.link_github,
+        keywords: [meta.technology_base, ...meta.technologies],
+      })),
+    })
+  );
 </script>
 
 {#snippet Project(
@@ -52,7 +67,8 @@
 
 <Layout
   pageTitle="Open-source"
-  pageDescription="An assortment of Opensource contributions made by Florian Krauthan to improve and fix cool opensource apps and libraries.">
+  pageDescription="An assortment of Opensource contributions made by Florian Krauthan to improve and fix cool opensource apps and libraries."
+  {jsonLd}>
   <div class="flex flex-col md:m-12 md:my-8 shadow-2xl">
     <div class="content w-full p-6 sm:p-12">
       <div class="prose dark:prose-invert">

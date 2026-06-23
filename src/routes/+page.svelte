@@ -1,11 +1,15 @@
 <script lang="ts">
   import Layout from "$lib/components/Layout.svelte";
+  import { person, website } from "$lib/jsonLd";
   import styles from "$lib/styles/index.module.css";
-  import clsx from "clsx";
+
+  import type { PageData } from "./$types";
+
+  let { data }: { data: PageData } = $props();
 </script>
 
 {#snippet TechnologyListItem(title: string)}
-  <li class={clsx(styles.list__item, "xl:pl-3")}>{title}</li>
+  <li class={[styles.list__item, "xl:pl-3"]}>{title}</li>
 {/snippet}
 
 {#snippet headerContent()}
@@ -17,7 +21,7 @@
           <span class="text-gray-800 dark:text-gray-400 font-bold tracking tracking-widest">and hello</span>
         </h1>
         <h2 class="font-bold tracking-widest text-4xl">I speak...</h2>
-        <span class={clsx(styles.container, "block font-light text-browngray text-2xl my-6")}>
+        <span class={[styles.container, "block font-light text-browngray text-2xl my-6"]}>
           <ul class={styles.list}>
             {@render TechnologyListItem("English")}
             {@render TechnologyListItem("German")}
@@ -53,6 +57,7 @@
 <Layout
   pageTitle="Welcome"
   pageDescription="Florian Krauthan, a Vancouver based software developer, who loves to eat, breathe and sleep technology to make the world a better place."
+  jsonLd={[website(), person(data.currentPosition)]}
   {headerContent}
   headerClassName={styles.header}
   hideTopNavigation />
