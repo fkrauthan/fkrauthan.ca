@@ -4,7 +4,10 @@
 // change to a skill, job title or project updates both the markup and the
 // structured data. The full `Person` node is emitted on `/about-me` only — every
 // other page references it by its stable `@id`.
-import { EDUCATION, LANGUAGES, PROFILE, SKILL_GROUPS, SOCIAL_LINKS } from "../profile";
+import cartoonImage from "$assets/fkrauthan-cartoon.jpg";
+import profileImage from "$assets/fkrauthan.jpg";
+import { EDUCATION, LANGUAGES, PROFILE, SKILL_GROUPS, SOCIAL_LINKS } from "$assets/profile";
+
 import type { CurrentPosition, MarkdownNode, OpensourceProject, ProjectTileData } from "../types";
 
 /** Canonical host — the apex redirects to www, so every `@id`/`url` lives here. */
@@ -94,7 +97,7 @@ export function personSchema(position: CurrentPosition | null): Node {
     givenName: PROFILE.givenName,
     familyName: PROFILE.familyName,
     url: pageUrl("/about-me"),
-    image: `${SITE_URL}/img/fkrauthan.jpg`,
+    image: `${SITE_URL}${profileImage}`,
     email: `mailto:${PROFILE.email}`,
     address: {
       "@type": "PostalAddress",
@@ -133,7 +136,7 @@ export function homePageGraph(): Node {
       description: HOME_DESCRIPTION,
       isPartOf: websiteRef(),
       about: personRef(),
-      primaryImageOfPage: `${SITE_URL}/img/fkrauthan-cartoon.jpg`,
+      primaryImageOfPage: `${SITE_URL}${cartoonImage}`,
       inLanguage: LANG,
     },
   ]);

@@ -1,4 +1,6 @@
 <script lang="ts">
+  import profilePicture from "$assets/fkrauthan.jpg?enhanced";
+  import { EDUCATION, LANGUAGES, PROFILE, SKILL_GROUPS, SOCIAL_LINKS } from "$assets/profile";
   import ActivePill from "$lib/components/ActivePill.svelte";
   import Layout from "$lib/components/Layout.svelte";
   import SectionHeader from "$lib/components/resume/SectionHeader.svelte";
@@ -8,7 +10,6 @@
   import SidebarLinkEntry from "$lib/components/resume/sidebar/SidebarLinkEntry.svelte";
   import SidebarSection from "$lib/components/resume/sidebar/SidebarSection.svelte";
   import WorkEntry from "$lib/components/resume/work/WorkEntry.svelte";
-  import { EDUCATION, LANGUAGES, PROFILE, SKILL_GROUPS, SOCIAL_LINKS } from "$lib/profile";
   import { aboutMeGraph } from "$lib/seo/schema";
   import type { Component } from "svelte";
   import HomeOutline from "~icons/ion/home-outline";
@@ -74,7 +75,11 @@
     class="w-full md:max-w-md p-8 bg-linear-to-b from-yellow-400 dark:from-yellow-800 dark:via-pink-800 dark:to-purple-700 via-pink-900 to-purple-50">
     <div class="px-2 mb-12">
       <div class="w-48 mx-auto mb-2">
-        <img src="/img/fkrauthan.jpg" alt="Profile Picture" class="rounded-full w-48 mx-auto mb-2" />
+        <enhanced:img
+          src={profilePicture}
+          alt="Profile Picture"
+          class="rounded-full w-48 mx-auto mb-2"
+          loading="lazy" />
       </div>
 
       <h1 class="text-center text-3xl font-semibold mb-2">{PROFILE.name}</h1>

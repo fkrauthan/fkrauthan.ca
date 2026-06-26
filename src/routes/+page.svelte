@@ -1,4 +1,5 @@
 <script lang="ts">
+  import cartoon from "$assets/fkrauthan-cartoon.jpg?enhanced";
   import Layout from "$lib/components/Layout.svelte";
   import { homePageGraph } from "$lib/seo/schema";
   import styles from "$lib/styles/index.module.css";
@@ -31,7 +32,12 @@
         <p class="font-bold tracking-widest text-4xl">...what about you!</p>
       </div>
       <div class="w-full sm:w-1/2">
-        <img src="/img/fkrauthan-cartoon.jpg" alt="Portrait of Florian Krauthan" class="rounded-full" />
+        <enhanced:img
+          src={cartoon}
+          alt="Portrait of Florian Krauthan"
+          class="rounded-full"
+          fetchpriority="high"
+          loading="eager" />
       </div>
     </div>
   </div>
