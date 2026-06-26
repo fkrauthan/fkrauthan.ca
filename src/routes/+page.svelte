@@ -1,11 +1,7 @@
 <script lang="ts">
   import Layout from "$lib/components/Layout.svelte";
-  import { person, website } from "$lib/jsonLd";
+  import { homePageGraph } from "$lib/seo/schema";
   import styles from "$lib/styles/index.module.css";
-
-  import type { PageData } from "./$types";
-
-  let { data }: { data: PageData } = $props();
 </script>
 
 {#snippet TechnologyListItem(title: string)}
@@ -57,7 +53,7 @@
 <Layout
   pageTitle="Welcome"
   pageDescription="Florian Krauthan, a Vancouver based software developer, who loves to eat, breathe and sleep technology to make the world a better place."
-  jsonLd={[website(), person(data.currentPosition)]}
+  jsonLd={homePageGraph()}
   {headerContent}
   headerClassName={styles.header}
   hideTopNavigation />

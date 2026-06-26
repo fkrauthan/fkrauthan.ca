@@ -1,7 +1,15 @@
 // Single source of truth for the profile facts that are surfaced both in the
-// about-me page markup and in the JSON-LD structured data (src/lib/jsonLd.ts).
-// Keep this module free of Svelte/component imports — jsonLd.ts imports it and
+// about-me page markup and in the JSON-LD structured data (src/lib/seo/schema.ts).
+// Keep this module free of Svelte/component imports — schema.ts imports it and
 // runs server-side, so it must stay plain data.
+
+export interface ProfileBasics {
+  name: string;
+  givenName: string;
+  familyName: string;
+  email: string;
+  location: { city: string; region: string; country: string };
+}
 
 export interface SocialLink {
   /** Stable key used to look up the sidebar icon component. */
@@ -26,6 +34,14 @@ export interface Language {
   language: string;
   fluency: string;
 }
+
+export const PROFILE: ProfileBasics = {
+  name: "Florian Krauthan",
+  givenName: "Florian",
+  familyName: "Krauthan",
+  email: "mail@fkrauthan.de",
+  location: { city: "Burnaby", region: "British Columbia", country: "CA" },
+};
 
 export const SOCIAL_LINKS: SocialLink[] = [
   { network: "GitHub", title: "Github", url: "https://github.com/fkrauthan" },

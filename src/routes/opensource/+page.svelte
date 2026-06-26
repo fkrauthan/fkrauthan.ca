@@ -3,7 +3,7 @@
   import MarkdownRenderer from "$lib/components/MarkdownRenderer.svelte";
   import ProjectLink from "$lib/components/projects/ProjectLink.svelte";
   import SectionHeader from "$lib/components/resume/SectionHeader.svelte";
-  import { collectionPage } from "$lib/jsonLd";
+  import { opensourceCollectionGraph } from "$lib/seo/schema";
   import styles from "$lib/styles/opensource.module.css";
   import type { MarkdownNode } from "$lib/types";
   import LogoGithub from "~icons/ion/logo-github";
@@ -13,16 +13,11 @@
   let { data }: { data: PageData } = $props();
 
   let jsonLd = $derived(
-    collectionPage({
-      name: "Open-source Contributions",
+    opensourceCollectionGraph({
+      name: "Open-source | Florian Krauthan",
       description:
         "An assortment of Opensource contributions made by Florian Krauthan to improve and fix cool opensource apps and libraries.",
-      path: "/opensource",
-      items: data.projects.map(({ meta }) => ({
-        name: meta.title.replace("/", " / "),
-        url: meta.link_github,
-        keywords: [meta.technology_base, ...meta.technologies],
-      })),
+      projects: data.projects,
     })
   );
 </script>

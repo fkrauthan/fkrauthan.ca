@@ -1,7 +1,6 @@
 <script lang="ts">
   import ActivePill from "$lib/components/ActivePill.svelte";
   import Layout from "$lib/components/Layout.svelte";
-  import { profilePage } from "$lib/jsonLd";
   import SectionHeader from "$lib/components/resume/SectionHeader.svelte";
   import SkillList from "$lib/components/resume/SkillList.svelte";
   import SkillListItem from "$lib/components/resume/SkillListItem.svelte";
@@ -9,7 +8,8 @@
   import SidebarLinkEntry from "$lib/components/resume/sidebar/SidebarLinkEntry.svelte";
   import SidebarSection from "$lib/components/resume/sidebar/SidebarSection.svelte";
   import WorkEntry from "$lib/components/resume/work/WorkEntry.svelte";
-  import { EDUCATION, LANGUAGES, SKILL_GROUPS, SOCIAL_LINKS } from "$lib/profile";
+  import { EDUCATION, LANGUAGES, PROFILE, SKILL_GROUPS, SOCIAL_LINKS } from "$lib/profile";
+  import { aboutMeGraph } from "$lib/seo/schema";
   import type { Component } from "svelte";
   import HomeOutline from "~icons/ion/home-outline";
   import LogoGithub from "~icons/ion/logo-github";
@@ -77,18 +77,18 @@
         <img src="/img/fkrauthan.jpg" alt="Profile Picture" class="rounded-full w-48 mx-auto mb-2" />
       </div>
 
-      <h1 class="text-center text-3xl font-semibold mb-2">Florian Krauthan</h1>
+      <h1 class="text-center text-3xl font-semibold mb-2">{PROFILE.name}</h1>
       <h2 class="text-center text-xl font-light">{label || "Fullstack Developer"}</h2>
     </div>
 
     <SidebarSection title="Contact">
       <SidebarEntry IconComponent={MailOutline}>
-        <a href="mailto:mail@fkrauthan.de" class="hover:text-gray-700">mail@fkrauthan.de</a>
+        <a href={`mailto:${PROFILE.email}`} class="hover:text-gray-700">{PROFILE.email}</a>
       </SidebarEntry>
       <SidebarEntry IconComponent={HomeOutline}>
         <div>
-          <p>Burnaby</p>
-          <p>British Columbia</p>
+          <p>{PROFILE.location.city}</p>
+          <p>{PROFILE.location.region}</p>
         </div>
       </SidebarEntry>
     </SidebarSection>
@@ -186,7 +186,7 @@
 <Layout
   pageTitle="About me"
   pageDescription="Learn more about Florian Krauthan, including but not limited to background, skills and interests"
-  jsonLd={profilePage("/about-me", data.currentPosition)}>
+  jsonLd={aboutMeGraph(data.currentPosition)}>
   <div class="flex flex-col md:flex-row-reverse md:m-12 md:my-8 shadow-2xl">
     {@render Sidebar(data.label)}
     {@render MainSection(data.work, data.volunteer)}

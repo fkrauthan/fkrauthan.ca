@@ -4,7 +4,7 @@
   import ProjectTile from "$lib/components/projects/ProjectTile.svelte";
   import TechnologyFilter from "$lib/components/projects/TechnologyFilter.svelte";
   import SectionHeader from "$lib/components/resume/SectionHeader.svelte";
-  import { collectionPage } from "$lib/jsonLd";
+  import { projectsCollectionGraph } from "$lib/seo/schema";
   import type { BaseTechnology, ProjectTileData } from "$lib/types";
 
   let {
@@ -47,16 +47,33 @@
     }
   }
 
+  function getFilterLabel(activeTechnology: string, technologies: BaseTechnology[]): string {
+    if (activeTechnology === "active") {
+      return "Active";
+    } else if (activeTechnology === "past") {
+      return "Past";
+    }
+    return technologies.find(({ slug }) => slug === activeTechnology)?.name ?? activeTechnology;
+  }
+
+  function getBreadcrumb(activeTechnology: string, technologies: BaseTechnology[], path: string) {
+    const trail = [
+      { name: "Home", path: "/" },
+      { name: "Projects", path: "/projects" },
+    ];
+    if (activeTechnology) {
+      trail.push({ name: getFilterLabel(activeTechnology, technologies), path });
+    }
+    return trail;
+  }
+
   let jsonLd = $derived(
-    collectionPage({
-      name: getPageTitle(activeTechnology, technologies),
-      description: getPageDescription(activeTechnology, technologies),
+    projectsCollectionGraph({
       path: page.url.pathname,
-      items: projects.map(({ meta }) => ({
-        name: meta.title,
-        url: meta.links.website || meta.links.github,
-        keywords: [meta.technology_base, ...meta.technologies],
-      })),
+      name: `${getPageTitle(activeTechnology, technologies)} | Florian Krauthan`,
+      description: getPageDescription(activeTechnology, technologies),
+      breadcrumb: getBreadcrumb(activeTechnology, technologies, page.url.pathname),
+      projects,
     })
   );
 </script>
