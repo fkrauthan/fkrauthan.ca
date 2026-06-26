@@ -14,5 +14,5 @@ links:
   website: https://pocket.wxbrief.ca/
 ---
 
-WXBrief Pocket is a tool to quickly check METAR/TAF around you, as well as real-time 
+WXBrief Pocket is a tool to quickly check METAR/TAF around you, as well as real-time
 ATIS where available.
