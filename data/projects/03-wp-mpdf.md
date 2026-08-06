@@ -1,7 +1,7 @@
 ---
 title: wp-mpdf
 development_start: "2009-06-28"
-in_active_development: yes
+in_active_development: no
 technology_base: PHP
 technologies:
   - Wordpress
